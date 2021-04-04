@@ -8,7 +8,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<?php foreach($news as $nw){?>
 			<div class="news-items">
 				<div class="item">
-					<h2 ><?php echo $nw->news_judul; ?></h2>
+					<h2 ><?php 
+					$judul = $nw->news_judul;
+					$konten = $nw->news_konten;
+					if($this->session->userdata('site_lang') == 'english'){
+						$judul = $nw->news_judul_eng;
+						$konten = $nw->news_konten_eng;
+					}else if($this->session->userdata('site_lang') == 'chinese'){
+						$judul = $nw->news_judul_ch;
+						$konten = $nw->news_konten_ch;
+					}
+					echo $judul ?></h2>
 					<div class="date">
 						<span><?php echo date('d M Y',strtotime($nw->news_date)); ?></span>
 					</div>
@@ -16,7 +26,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<img src="<?php echo base_url(); ?>assets/uploads/news/<?php echo $nw->news_foto; ?>">
 						<p>
 						 <?php
-                            $string = strip_tags($nw->news_konten);
+
+                            $string = strip_tags($konten);
                             if (strlen($string) > 350) {
                                 // truncate string
                                 $stringCut = substr($string, 0, 350);

@@ -10,8 +10,11 @@
         </div>
         <div class="social">
           <ul>
-            <li><a class="ig" target="blank" href="<?php echo $profile->link_ig; ?>" ><i class="icon-instagram"></i></a></li>
-            <li><a class="fb" target="blank" href="<?php echo $profile->link_fb; ?>" ><i class="icon-facebook"></i></a></li>
+             <select onchange="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/'+this.value;">
+               <option value="english" <?php if($this->session->userdata('site_lang') == 'english') echo 'selected="selected"'; ?>>English</option>
+               <option value="indo" <?php if($this->session->userdata('site_lang') == 'indo') echo 'selected="selected"'; ?>>Indonesia</option>
+               <option value="chinese" <?php if($this->session->userdata('site_lang') == 'chinese') echo 'selected="selected"'; ?>>Chinese</option>
+            </select>
           </ul>
         </div>
         <!--div id="google_translate_element"></div-->
@@ -61,23 +64,23 @@
           </div>
         </div>
         <ul class="nav navbar-nav navbar-center" align="center">
-           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
+           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>"><?php echo $this->lang->line('menu_home'); ?></a></li>
            <li class="list-menu about">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">Our Profile</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>"><?php echo $this->lang->line('menu_profile'); ?></a>
            <li class="list-menu category">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>">Our Products</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>"><?php echo $this->lang->line('menu_product'); ?></a>
            </li>
            <li class="list-menu category">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">News and Event</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>"><?php echo $this->lang->line('menu_news'); ?></a>
            </li>
            <li class="list-menu category">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("howto"); ?>">How to Order</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("howto"); ?>"><?php echo $this->lang->line('menu_howto'); ?></a>
            </li>
            <li class="list-menu category">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("faq"); ?>">FAQ</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("faq"); ?>"><?php echo $this->lang->line('menu_faq'); ?></a>
            </li>
            <li class="list-menu category">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>"><?php echo $this->lang->line('menu_contact'); ?></a>
            </li>
         </ul>
         <div class="download">

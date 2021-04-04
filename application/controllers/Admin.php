@@ -222,7 +222,11 @@ class Admin extends CI_Controller {
         $gc->set_table('data_news');
         $gc->display_as('news_foto', 'Foto');
         $gc->display_as('news_judul', 'Judul');
+        $gc->display_as('news_judul_eng', 'Judul(Eng)');
+        $gc->display_as('news_judul_ch', 'Judul(Chinese)');
         $gc->display_as('news_konten', 'Konten');
+        $gc->display_as('news_konten_eng', 'Konten(Eng)');
+        $gc->display_as('news_konten_ch', 'Konten(Chinese)');
 		$gc->set_field_upload('news_foto', 'assets/uploads/news');
         $gc->required_fields('news_foto','news_judul','news_konten');
         $gc->columns('news_foto', 'news_judul');
