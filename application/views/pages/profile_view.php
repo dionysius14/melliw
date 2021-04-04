@@ -5,8 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
 	<div class="profile container">
 		<div class="side">
-		  	<h1>Our Principles</h1>
-		  	<div class="points">
+		  	<h1>Story Behind</h1>
+<!-- 		  	<div class="points">
 		  		<i class="icon-thumbs-up-alt" ></i>
 		  		<h2>High quality service</h2>
 		  		<p>
@@ -26,10 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  		<p>
 		  			Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 		  		</p>
-		  	</div>
+		  	</div> -->
 		</div>
 		<div class="side">
-		  	<h1>Sayfresh</h1>
+		  	<h1>Vision Mission</h1>
 			<div class="image" style="background-image: url(https://demos.sitepad.com/AGRILAND/images/tour.jpg)"></div>
 			<div class="content">
 				<?php echo $profile->profile_ket; ?>

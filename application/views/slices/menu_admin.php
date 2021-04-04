@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li><a href="<?php echo site_url('admin/kontak'); ?>"><i class="fa fa-fw fa-envelope"></i> Data Kontak</a></li>
                     <!-- <li><a href="<?php echo site_url('admin/chat'); ?>"><i class="fa fa-fw fa-users"></i> Online Chat</a></li> -->
                     <li><a href="<?php echo site_url('admin/slider'); ?>"><i class="fa fa-fw fa-image"></i> Slider</a></li>
-                    <li><a href="<?php echo site_url('admin/testimonial'); ?>"><i class="fa fa-fw fa-users"></i> Testimonial</a></li>
+                   <!--  <li><a href="<?php echo site_url('admin/testimonial'); ?>"><i class="fa fa-fw fa-users"></i> Testimonial</a></li> -->
                     <li><a href="<?php echo site_url('admin/news'); ?>"><i class="fa fa-fw fa-envelope"></i> News/Event</a></li>
                     <li><a href="<?php echo site_url('admin/faq'); ?>"><i class="fa fa-fw fa-question"></i> FAQ</a></li>
                     <li><a href="<?php echo site_url('admin/howto'); ?>"><i class="fa fa-fw fa-question"></i> How to Order</a></li>

@@ -112,33 +112,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<a href="<?php echo site_url("ourproduct"); ?>">Show All</a>
 				</div>
 			</div>
-
-			<div class="testimonial">
-				<div class="container">
-					<h3>Testimonial</h3>
-					<?php foreach($testimonial as $ts){?>
-					<div class="gkImage">
-						<div class="image">
-							<a href="<?php echo base_url(); ?>assets/uploads/testimonial/<?php echo $ts->testimonial_foto; ?>">
-								<div>
-									<img src="<?php echo base_url(); ?>assets/uploads/testimonial/<?php echo $ts->testimonial_foto; ?>" alt="">
-								</div>
-							</a>
-						</div>
-						<div class="text">
-							<div class="testi-name">
-								<h4><?php echo $ts->testimonial_nama; ?></h4>
-							</div>
-							<p>
-								<?php 
-									echo $ts->testimonial_ket; 
-								?>
-							</p>
-						</div>
-					</div>
-					<?php } ?>
-				</div>
-			</div>
 	</div>
 </div>
 

@@ -4,7 +4,14 @@
 			<div class="row about">
 				<h3>About Sayfresh</h3>			
 				<div>
-					<?php echo $profile->overview; ?>
+					<?php
+						$overview = $profile->overview;
+						if($this->session->userdata('site_lang') == 'english'){
+							$overview = $profile->overview_eng;
+						}else if($this->session->userdata('site_lang') == 'chinese'){
+							$overview = $profile->overview_ch;
+						}
+					 echo $overview; ?>
 				</div>
 			</div>
 			<div class="row contact">
@@ -12,7 +19,7 @@
 				<div>
 					<ul>
 						<li>
-							<span>Please contact Us below for more detail information.</span>
+							<span><?php echo $this->lang->line('footer_text_contact'); ?></span>
 						</li>
 						<li>
 							<i class="icon-phone"></i><span><?php echo $profile->phone; ?></span>
