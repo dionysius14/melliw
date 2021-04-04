@@ -61,7 +61,11 @@ class Admin extends CI_Controller {
         $gc->set_subject('Profile');
         $gc->set_table('data_profile');
         $gc->display_as('profile_ket', 'Profile');
+        $gc->display_as('profile_ket_eng', 'Profile(Eng)');
+        $gc->display_as('profile_ket_ch', 'Profile(Chinese)');
         $gc->display_as('overview', 'Company Overview');
+        $gc->display_as('overview_eng', 'Company Overview(Eng)');
+        $gc->display_as('overview_ch', 'Company Overview(Chinese)');
         $gc->display_as('link_fb', 'Link Facebook');
         $gc->display_as('link_ig', 'Link Instagram');
         $gc->display_as('link_wa', 'Whatsapp');
@@ -165,7 +169,11 @@ class Admin extends CI_Controller {
         $gc->set_table('faq');
         $gc->change_field_type('faq_id', 'invisible');
         $gc->display_as('faq_ask', 'Tanya');
+        $gc->display_as('faq_ask_eng', 'Tanya(Eng)');
+        $gc->display_as('faq_ask_ch', 'Tanya(Chinese)');
         $gc->display_as('faq_answer', 'Jawaban');
+        $gc->display_as('faq_answer_eng', 'Jawaban(Eng)');
+        $gc->display_as('faq_answer_ch', 'Jawaban(Chinese)');
         $gc->required_fields('faq_ask', 'faq_answer');
         $gc->unset_print();
         $output = $gc->render();

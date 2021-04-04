@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 04, 2021 at 04:52 PM
+-- Generation Time: Apr 04, 2021 at 05:10 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.1.33
 
@@ -302,7 +302,11 @@ INSERT INTO `data_produk` (`produk_id`, `kategori_id`, `sort`, `banner`, `nama`,
 CREATE TABLE `data_profile` (
   `profile_id` int(11) NOT NULL,
   `profile_ket` text DEFAULT NULL,
+  `profile_ket_eng` text NOT NULL,
+  `profile_ket_ch` text NOT NULL,
   `overview` text DEFAULT NULL,
+  `overview_eng` text NOT NULL,
+  `overview_ch` text NOT NULL,
   `link_ig` varchar(255) NOT NULL,
   `link_fb` varchar(255) NOT NULL,
   `link_wa` varchar(255) NOT NULL,
@@ -319,8 +323,8 @@ CREATE TABLE `data_profile` (
 -- Dumping data for table `data_profile`
 --
 
-INSERT INTO `data_profile` (`profile_id`, `profile_ket`, `overview`, `link_ig`, `link_fb`, `link_wa`, `phone`, `email`, `headoffice`, `working_time`, `catalog`, `latitude`, `longitude`) VALUES
-(1, '<p>\n	PT. SAYFRESH TANI NUSANTARA adalah sebuah perusahaan di bidang sayuran holtikultura yang menyediakan berbagai jenis bahan pangan organik seperti sayuran dan buah-buahan. Kami berkomitmen menyediakan sayur dan buah yang segar dan sehat untuk keluarga Anda hingga sampai ke depan pintu rumah Anda.</p>\n<div>\n	&nbsp;</div>\n', '<p>\n	PT. SAYFRESH TANI NUSANTARA adalah sebuah perusahaan di bidang sayuran holtikultura yang menyediakan berbagai jenis bahan pangan organik seperti sayuran dan buah-buahan. Kami berkomitmen menyediakan sayur dan buah yang segar dan sehat untuk keluarga Anda hingga sampai ke depan pintu rumah Anda.</p>\n', 'https://www.instagram.com/sayfreshjogja/', 'https://www.facebook.com/sayfreshjogja', 'https://api.whatsapp.com/send?phone=6281225334452&text=Halo Sayfresh, ', '6281225334452', 'sayfreshindo@gmail.com', 'XT Square - Gedung De Mata, Jl. Veteran No.150-151, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta', 'Setiap Hari : 10.00-16.00 WIB', 'ca805-katalog_sayfresh.pdf', '-7.8162841', '110.386559');
+INSERT INTO `data_profile` (`profile_id`, `profile_ket`, `profile_ket_eng`, `profile_ket_ch`, `overview`, `overview_eng`, `overview_ch`, `link_ig`, `link_fb`, `link_wa`, `phone`, `email`, `headoffice`, `working_time`, `catalog`, `latitude`, `longitude`) VALUES
+(1, '<p>\n	PT. SAYFRESH TANI NUSANTARA adalah sebuah perusahaan di bidang sayuran holtikultura yang menyediakan berbagai jenis bahan pangan organik seperti sayuran dan buah-buahan. Kami berkomitmen menyediakan sayur dan buah yang segar dan sehat untuk keluarga Anda hingga sampai ke depan pintu rumah Anda.</p>\n<div>\n	&nbsp;</div>\n', '<p>\n	PT. SAYFRESH TANI NUSANTARA is a company in the field of horticultural vegetables that provides various types of organic food ingredients such as vegetables and fruits. We are committed to providing your family with fresh and healthy fruits and vegetables right up to your doorstep.</p>\n', '<p>\n	PT. SAYFRESH TANI NUSANTARA sh&igrave; y?ji? sh?c&agrave;i yu&aacute;ny&igrave; g?ngs?, t&iacute;g?ng g&egrave; zh?ng l&egrave;ix&iacute;ng de y?uj? sh&iacute;p?n ch&eacute;ngf&egrave;n, l&igrave;r&uacute; sh?c&agrave;i h&eacute; shu?gu?. W?men zh&igrave;l&igrave; y&uacute; w&egrave;i n&iacute;n de ji?r&eacute;n t&iacute;g?ng x?nxi?n ji&agrave;nk?ng de shu?gu? h&eacute; sh?c&agrave;i, zh&iacute;zh&igrave; n&iacute;n ji? m&eacute;nk?u.</p>\n', '<p>\n	PT. SAYFRESH TANI NUSANTARA adalah sebuah perusahaan di bidang sayuran holtikultura yang menyediakan berbagai jenis bahan pangan organik seperti sayuran dan buah-buahan. Kami berkomitmen menyediakan sayur dan buah yang segar dan sehat untuk keluarga Anda hingga sampai ke depan pintu rumah Anda.</p>\n', '<p>\n	PT. SAYFRESH TANI NUSANTARA is a company in the field of horticultural vegetables that provides various types of organic food ingredients such as vegetables and fruits. We are committed to providing your family with fresh and healthy fruits and vegetables right up to your doorstep.</p>\n', '<p>\n	PT. SAYFRESH TANI NUSANTARA sh&igrave; y?ji? sh?c&agrave;i yu&aacute;ny&igrave; g?ngs?, t&iacute;g?ng g&egrave; zh?ng l&egrave;ix&iacute;ng de y?uj? sh&iacute;p?n ch&eacute;ngf&egrave;n, l&igrave;r&uacute; sh?c&agrave;i h&eacute; shu?gu?. W?men zh&igrave;l&igrave; y&uacute; w&egrave;i n&iacute;n de ji?r&eacute;n t&iacute;g?ng x?nxi?n ji&agrave;nk?ng de shu?gu? h&eacute; sh?c&agrave;i, zh&iacute;zh&igrave; n&iacute;n ji? m&eacute;nk?u.</p>\n', 'https://www.instagram.com/sayfreshjogja/', 'https://www.facebook.com/sayfreshjogja', 'https://api.whatsapp.com/send?phone=6281225334452&text=Halo Sayfresh, ', '6281225334452', 'sayfreshindo@gmail.com', 'XT Square - Gedung De Mata, Jl. Veteran No.150-151, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta', 'Setiap Hari : 10.00-16.00 WIB', 'ca805-katalog_sayfresh.pdf', '-7.8162841', '110.386559');
 
 -- --------------------------------------------------------
 
@@ -351,25 +355,20 @@ INSERT INTO `data_user` (`user_id`, `user_name`, `user_password`, `is_delete`) V
 CREATE TABLE `faq` (
   `faq_id` smallint(6) NOT NULL,
   `faq_ask` text NOT NULL,
-  `faq_answer` text NOT NULL
+  `faq_ask_eng` text NOT NULL,
+  `faq_ask_ch` text NOT NULL,
+  `faq_answer` text NOT NULL,
+  `faq_answer_eng` text NOT NULL,
+  `faq_answer_ch` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `faq`
 --
 
-INSERT INTO `faq` (`faq_id`, `faq_ask`, `faq_answer`) VALUES
-(1, '<p>\n	<span style=\"font-size:20px;\">Dimana alamat kantor SayFresh?</span></p>\n', '<p>\n	<span style=\"font-size:14px;\">XT Square, Jl. Veteran No.150-151,</span></p>\n<p>\n	<span style=\"font-size:14px;\">Pandeyan, Kec. Umbulharjo, Kota Yogyakarta,</span></p>\n<p>\n	<span style=\"font-size:14px;\">Daerah Istimewa Yogyakarta 55161</span></p>\n'),
-(2, '<p>\n	<span style=\"font-size:20px;\">Ada sayur apa saja? Sayurnya apa saja?</span></p>\n', '<p>\n	<span style=\"font-size:14px;\">Untuk daftar sayur dapat dilihat di website http://sayfresh.co.id</span></p>\n<p>\n	<span style=\"font-size:14px;\">Atau dapat menghubungi kami via Whatsapp di 08112957891 dengan format NAMA dan ALAMAT</span></p>\n'),
-(3, '<p>\n	<span style=\"font-size:20px;\">Apakah semua sayur di SayFresh sayur organik?</span></p>\n', '<p>\n	<span style=\"font-size:14px;\">Semua sayur sudah bersertifikat organik.</span></p>\n<p>\n	<span style=\"font-size:14px;\">Beberapa produk kami belum bersertifikat namun berasal dari pertanian ramah lingkungan </span></p>\n<p>\n	<span style=\"font-size:14px;\">yang bebas bahan kimia dan pertisida.</span></p>\n'),
-(4, '<p>\n	<span style=\"font-size:20px;\">Berapa berat minimal order sayur?</span></p>\n', '<p>\n	Tidak ada berat minimal untuk order sayur.&nbsp;</p>\n'),
-(5, '<p>\r\n	Apakah ada minimal order? Berapa?</p>\r\n', '<p>\r\n	Tidak ada minimal order.</p>\r\n'),
-(6, '<p>\n	<span style=\"font-size:20px;\">Berapa ongkos kirim untuk pembelian sayur?</span></p>\n', '<p>\n	<span style=\"font-size:14px;\">Ongkos kirim sesuai jarak tempuh. Nanti akan diinformasikan melalui whatsapp langsung dengan Admin kami.</span></p>\n'),
-(7, '<p>\n	<span style=\"font-size:20px;\">Bagaimana cara bayarnya?</span></p>\n', '<p>\n	<span style=\"font-size:14px;\">Pembayaran dapat dilakukan dengan bayar ditempat </span></p>\n<p>\n	<span style=\"font-size:14px;\">atau dengan transfer ke rekening bank kami </span></p>\n<p>\n	<span style=\"font-size:14px;\">yang akan diinfokan melalui Whatsapp oleh admin kami.</span></p>\n'),
-(8, '<p>\n	<span style=\"font-size:20px;\">Apakah bisa datang ke outlet langsung ?</span></p>\n', '<p>\n	<span style=\"font-size:14px;\">Bisa. Silakan datang langsung ke outlet kami di :&nbsp;</span></p>\n<p>\n	<span style=\"font-size:14px;\"><span pt=\"\" style=\"color: rgb(0, 0, 0); font-family: \">XT Square, Jl. Veteran No.150-151,&nbsp;Pandeyan,</span></span></p>\n<p>\n	<span style=\"font-size:14px;\"><span pt=\"\" style=\"color: rgb(0, 0, 0); font-family: \">Kec. Umbulharjo, Kota Yogyakarta,</span></span></p>\n<p font-size:=\"\" pt=\"\" style=\"box-sizing: border-box; margin: 0px 0px 10px; color: rgb(0, 0, 0); font-family: \">\n	<span style=\"font-size:14px;\">Daerah Istimewa Yogyakarta 55161</span></p>\n'),
-(9, '<p>\n	<span style=\"font-size:20px;\">Pengiriman hari apa saja?</span></p>\n', '<p>\n	Pengiriman dilakukan setiap hari Senin - Sabtu jam 11.00 - 15.00.</p>\n'),
-(10, '<p>\n	<span style=\"font-size:20px;\">Pengiriman dilakukan jam berapa?</span></p>\n', '<p>\n	<span style=\"font-size:14px;\">Jam pengiriman menyesuaikan ketersedian sayur yang telah dipacking. Untuk lebih lanjut akan diinfokan oleh admin kami melalui WhatsApp.</span></p>\n'),
-(11, '<p>\n	<span style=\"font-size:20px;\">Sayur apa saja yang ready?</span></p>\n', '<p>\n	Sayur ready tiap harinya dapat ditanyakan via WA ke admin kami.</p>\n');
+INSERT INTO `faq` (`faq_id`, `faq_ask`, `faq_ask_eng`, `faq_ask_ch`, `faq_answer`, `faq_answer_eng`, `faq_answer_ch`) VALUES
+(1, '<p>\n	<span style=\"font-size:20px;\">Dimana alamat kantor SayFresh?</span></p>\n', '<p>\n	Where is SayFresh&#39;s office address?</p>\n', '<pre class=\"tw-data-text tw-text-small tw-ta\" data-placeholder=\"\" dir=\"ltr\" id=\"tw-target-rmn\" style=\"unicode-bidi: isolate; background-color: rgb(248, 249, 250); border: none; padding: 0px 0.14em 0px 0px; position: relative; margin-top: 0px; margin-bottom: 0px; resize: none; font-family: inherit; overflow: hidden; width: 270px; white-space: pre-wrap; overflow-wrap: break-word; font-size: 16px; line-height: 24px; color: rgba(0, 0, 0, 0.54);\">\nSayFresh de b&agrave;ng?ngsh&igrave; d&igrave;zh? z&agrave;i n?l??</pre>\n', '<p>\n	<span style=\"font-size:14px;\">XT Square, Jl. Veteran No.150-151,</span></p>\n<p>\n	<span style=\"font-size:14px;\">Pandeyan, Kec. Umbulharjo, Kota Yogyakarta,</span></p>\n<p>\n	<span style=\"font-size:14px;\">Daerah Istimewa Yogyakarta 55161</span></p>\n', '<p>\n	<span style=\"font-size: 14px;\">XT Square, Jl. Veteran No.150-151,</span></p>\n<p>\n	<span style=\"font-size: 14px;\">Pandeyan, Kec. Umbulharjo, Kota Yogyakarta,</span></p>\n<p>\n	<span style=\"font-size: 14px;\">Daerah Istimewa Yogyakarta 55161</span></p>\n', '<p>\n	<span style=\"font-size: 14px;\">XT Square, Jl. Veteran No.150-151,</span></p>\n<p>\n	<span style=\"font-size: 14px;\">Pandeyan, Kec. Umbulharjo, Kota Yogyakarta,</span></p>\n<p>\n	<span style=\"font-size: 14px;\">Daerah Istimewa Yogyakarta 55161</span></p>\n'),
+(2, '<p>\n	<span style=\"font-size:20px;\">Ada sayur apa saja? Sayurnya apa saja?</span></p>\n', '<p>\n	What are the vegetables? What are the vegetables?</p>\n', '<pre class=\"tw-data-text tw-text-small tw-ta\" data-placeholder=\"\" dir=\"ltr\" id=\"tw-target-rmn\" style=\"unicode-bidi: isolate; background-color: rgb(248, 249, 250); border: none; padding: 0px 0.14em 0px 0px; position: relative; margin-top: 0px; margin-bottom: 0px; resize: none; font-family: inherit; overflow: hidden; width: 270px; white-space: pre-wrap; overflow-wrap: break-word; font-size: 16px; line-height: 24px; color: rgba(0, 0, 0, 0.54);\">\nSh&eacute;nme sh&igrave; sh?c&agrave;i? Sh&eacute;nme sh&igrave; sh?c&agrave;i?</pre>\n', '<p>\n	<span style=\"font-size:14px;\">Untuk daftar sayur dapat dilihat di website http://sayfresh.co.id</span></p>\n<p>\n	<span style=\"font-size:14px;\">Atau dapat menghubungi kami via Whatsapp di 08112957891 dengan format NAMA dan ALAMAT</span></p>\n', '<div>\n	For a list of vegetables, see the website http://sayfresh.co.id</div>\n<div>\n	&nbsp;</div>\n<div>\n	Or you can contact us via Whatsapp at 08112957891 in the NAME and ADDRESS format</div>\n', '<pre class=\"tw-data-text tw-text-small tw-ta\" data-placeholder=\"\" dir=\"ltr\" id=\"tw-target-rmn\" style=\"unicode-bidi: isolate; background-color: rgb(248, 249, 250); border: none; padding: 0px 0.14em 0px 0px; position: relative; margin-top: 0px; margin-bottom: 0px; resize: none; font-family: inherit; overflow: hidden; width: 270px; white-space: pre-wrap; overflow-wrap: break-word; font-size: 16px; line-height: 24px; color: rgba(0, 0, 0, 0.54);\">\nY?ugu?n sh?c&agrave;i d&igrave; li&egrave;bi?o, q?ng c?nji&agrave;n w?ngzh&agrave;n http://Sayfresh.Co.Id\n\nhu&ograve;zh?, n&iacute;n k?y? t?nggu&ograve; Whatsapp y? w?men li&aacute;nx&igrave;, di&agrave;nhu&agrave; w&egrave;i 08112957891, y? NAME h&eacute; ADDRESS g&eacute;sh&igrave;</pre>\n');
 
 -- --------------------------------------------------------
 
