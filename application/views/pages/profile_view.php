@@ -29,7 +29,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  	</div> -->
 		</div>
 		<div class="side">
-		  	<h1>Vision Mission</h1>
+		  	<h1>Misi</h1>
+		  	<ul>
+		  		<li>
+		  			<h1>Untuk Lingkungan</h1>
+			  		<p>
+			  			Memastikan keseluruhan proses tanam berkontribusi menjadikan lingkungan lebih baik.
+			  		</p>
+		  		</li>
+		  		<li>
+		  			<h1>Untuk Konsumen</h1>
+			  		<p>
+			  			Berkomitmen memberikan produk pertanian yang berkualitas sesuai janji
+			  		</p>
+		  		</li>
+		  		<li>
+		  			<h1>Untuk Stakeholder</h1>
+			  		<p>
+			  			Memberdayakan dan melatih petani lokal secara berkesinambungan.
+			  		</p>
+		  		</li>
+		  		<li>
+		  			<h1>Untuk Karyawan</h1>
+			  		<p>
+			  			Menciptakan lapangan pekerjaan yang semakin bertumbuh disertai dengan perencanaan karir yang baik serta pengembangan kepribadian yang berkesinambungan
+			  		</p>
+		  		</li>
+		  		<li>
+		  			<h1>Untuk Shareholder</h1>
+			  		<p>
+			  			Memberikan kepastian pertumbuhan perusahaan diatas rata rata.
+			  		</p>
+		  		</li>
+		  	</ul>
 			<div class="image" style="background-image: url(https://demos.sitepad.com/AGRILAND/images/tour.jpg)"></div>
 			<div class="content">
 				<?php echo $profile->profile_ket; ?>

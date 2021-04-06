@@ -31,69 +31,89 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				}
 			});
 		</script>
-		<div class="container">
-		</div>
 		<div class="why">
 			<div class="container">
-				<h1>Why Choose Sayfresh?</h1>
-					<div class="side">
-						<ul>
-							<li>
-								<div class="icon">
-									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\leaf.png">
-								</div>
-								<h2 style=" color: ;">Quality</h2>
+				<div class="side">
+					<ul>
+						<li>
+							<div class="icon">
+								<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\leaf.png">
+							</div>
+							<div class="content">
+								<h2>Lahan</h2>
 								<div class="smue-service-box-content-section">
-									<p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, type specimen book.</p>
+									<p>Melliw Berdiri di atas lahan subur seluas lebih dari 30 hektar yang siap kami jadikan penghasil komodity unggulan</p>
 								</div>
-							</li>
-							<li>
-								<div class="icon">
-									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\so-logo.png">
-								</div>
-								<h2 style=" color: ;">Smart Logistics</h2>
-								<div class="smue-service-box-content-section">
-									<p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, type specimen book.</p>
-								</div>
-							</li>
-							<li>
-								<div class="icon">
-									<i class="fa fa-truck"></i>
-								</div>
-								<h2 style=" color: ;">Free Delivery</h2>
-								<div class="smue-service-box-content-section">
-									<p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, type specimen book.</p>
-								</div>
-							</li>
-							<li>
-								<div class="icon">
+							</div>
+						</li>
+						<li>
+							<div class="icon">
 									<i class="fa fa-users"></i>
-								</div>
-								<h2 style=" color: ;">Seasoned Team</h2>
+							</div>
+							<div class="content">
+								<h2>Trained Farmers</h2>
 								<div class="smue-service-box-content-section">
-									<p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, type specimen book.</p>
+									<p>Melliw mempunyai training program swadaya untuk meningkatkan kualitas SDM petani</p>
 								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="side">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\service.png">
-					</div>
+							</div>
+						</li>
+						<li>
+							<div class="icon">
+									<i class="fa fa-users"></i>
+							</div>
+							<div class="content">
+								<h2>Expert QC</h2>
+								<div class="smue-service-box-content-section">
+									<p>Melliw punya jajaran Quality Control yang paham standard international</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="icon">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\so-logo.png">
+							</div>
+							<div class="content">
+								<h2>Long Lasting</h2>
+								<div class="smue-service-box-content-section">
+									<p>Melliw berorientasi ke bisnis berelanjutan jangka panjang</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="icon">
+									<i class="fa fa-truck"></i>
+							</div>
+							<div class="content">
+								<h2>Great Samples</h2>
+								<div class="smue-service-box-content-section">
+									<p>Sample yang kami kirim sesuai dengan barang yang dikirim</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="icon">
+									<i class="fa fa-truck"></i>
+							</div>
+							<div class="content">
+								<h2>Affordable</h2>
+								<div class="smue-service-box-content-section">
+									<p>Langsung produsen sehingga harga lebih terjangkau</p>
+								</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
-
-			<div class="products">
-				<div class="container">
-					<div class="title">
-						<h2>Products</h2>
-					</div>
-					<?php foreach($latest as $dtl){?>
-					<div class="gkImage">
-						<div class="image" style="background-image: url(<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>)">
-						</div>
-						<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
-							<div class="button">See Product</div>
-						</a>
+		</div>
+		<div class="products">
+			<div class="container">
+				<div class="title">
+					<h2>Featured Products</h2>
+				</div>
+				<?php foreach($latest as $dtl){?>
+				<div class="gkImage">
+					<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+						<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
 						<div class="text">
 							<div class="prod-name">
 								<h4><?php echo $dtl->nama; ?></h4>
@@ -107,11 +127,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<?php } ?>
 							</div>
 						</div>
-					</div>
-					<?php } ?>
-					<a href="<?php echo site_url("ourproduct"); ?>">Show All</a>
+					</a>
 				</div>
+				<?php } ?>
+				<a href="<?php echo site_url("ourproduct"); ?>">Show All</a>
 			</div>
+		</div>
 	</div>
 </div>
 
