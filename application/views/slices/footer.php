@@ -2,7 +2,7 @@
     <div class="footer">
     	<div class="container">
 			<div class="row about">
-				<h3>About Sayfresh</h3>			
+				<h3>About Melliw</h3>			
 				<div>
 					<?php
 						$overview = $profile->overview;
@@ -27,10 +27,17 @@
 						<li>
 							<i class="icon-globe"></i><span><?php echo $profile->headoffice; ?></span>
 						</li>
+						<li>
+		              		<i class="icon-envelope"></i><span><?php echo $profile->email; ?></span>
+						</li>
+						<li>
+				              <i class="icon-time"></i>
+				              <span><p><?php echo $profile->working_time; ?></p></span>
+						</li>
 					</ul>
 				</div>
 			</div>
     	</div>
     </div>
-    <div class="copyright">Copyright 2018 All Right Reserved</div>
+    <div class="copyright">Copyright 2021 All Right Reserved</div>
 </div>

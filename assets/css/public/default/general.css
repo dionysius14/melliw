@@ -18,15 +18,71 @@ h1, h2, h3, h4{
     width: 100%;    
     padding: 0px 15px;
 }
+.header{
+    margin-bottom: 20px;
+}
 .header .upper{
     background: #8dd842;
     padding: 10px 85px;
 }
 .header .upper .container{
     overflow: hidden;
+    position: relative;
 }
-.header .upper .container > div{
+
+.header div.info{
+    float: none;
+    width: 100%;
+    max-width: 815px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header div.info ul{
+    list-style: none;
+    overflow: hidden;    
+    margin-bottom: 0px;
+}
+.header div.info ul li{
     width: calc(100%/3);
+    float: left;
+    text-align: left;
+    padding-left: 50px;   
+    color: black;    
+    position: relative;
+    letter-spacing: 0.7px;
+    line-height: 16px;
+}
+.header div.info ul li span{
+}
+.header div.info ul li a{
+    color: black;
+    display: block;
+}
+.header div.info ul li p{
+    margin-bottom: 0px;
+}
+.header div.info ul li i.icon-phone,
+.header div.info ul li i.icon-time{
+    padding: 5px 7px;
+}
+.header div.info ul li i{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    border: 1px dotted #70a942;
+    padding: 5px;
+    border-radius: 30px;
+}
+.header div.info ul li i:before{
+    font-size: 20px;
+    color: #70a942;
+}
+
+.header .upper .container > div{
+    width: calc(100%/2);
     float: left;
     text-align: center;
 }
@@ -99,76 +155,35 @@ h1, h2, h3, h4{
     background: #ffffff;
     overflow: hidden;
 }
-.header .middle .container{
+.header .middle > .container{
     position: relative;
-}
-.header .middle .container div{    
-    width: 60%;
-    float: left;    
-    margin-bottom: 10px;
+    display: flex;
 }
 .header .middle div.logo{
-    width: 40%;
+    width: 50%;
+    margin-top: 10px;
 }
 .header .middle div.logo img{
     width: 100%;
     max-width: 200px;;
 }
-
-.header div.info{
-    float: none;
-    width: 100%;
-    max-width: 815px;
+.header .header-menu{
+    background-color: transparent;
+    width: 50%;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
-.header div.info ul{
-    list-style: none;
-    overflow: hidden;    
-    margin-bottom: 0px;
-}
-.header div.info ul li{
-    width: calc(100%/3);
-    float: left;
-    text-align: left;
-    padding-left: 50px;   
-    color: black;    
-    position: relative;
-    letter-spacing: 0.7px;
-}
-.header div.info ul li a{
-    color: black;
-    display: block;
-}
-.header div.info ul li p{
-    margin-bottom: 0px;
-}
-.header div.info ul li i.icon-phone,
-.header div.info ul li i.icon-time{
-    padding: 5px 7px;
-}
-.header div.info ul li i{
-    position: absolute;
-    left: 0;
-    top: 0px;
-    border: 1px dotted #8dd842;
-    padding: 5px;
-    border-radius: 30px;
-}
-.header div.info ul li i:before{
-    font-size: 26px;
-    color: #8dd842;
-}
-
-.header .header-menu{
-    background-color: #F6F6F6;
-}
-.header .header-menu .container{
+.header  .middle .header-menu .container{
     position: relative;
     padding: 10px 10px;
+    width: 100%;
+}
+.header  .middle .header-menu .container .language-switcher{
+    line-height: 40px;
+    margin-left: 20px;
+    float: left;
 }
 .header .header-menu .navbar-nav{
     display: block;
@@ -181,7 +196,7 @@ h1, h2, h3, h4{
 .header .header-menu .navbar-nav li a{
     padding: 10px;    
     color: #858585;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 16px;
     transition: all 0.6s ease-in-out 0s;
     font-family: 'Raleway', sans-serif;
@@ -300,11 +315,8 @@ h2{
 .homepage .slider img{
     width: 100%;
 }
-.homepage .why{
-    overflow: hidden;
-    background-color: rgb(238, 238, 238);    
-    padding-top: 40px;
-    padding-bottom: 40px;
+.homepage .why .container{
+       position: relative;
 }
 .homepage .why .side{
     float: left;    
@@ -314,16 +326,27 @@ h2{
 }
 .homepage .why .side ul{
     list-style: none;
-    overflow: hidden;
+    position: absolute;
+    top: -90px;
+    left: 0px;
+    width: 100%;
 }
 .homepage .why .side ul li{
     float: left;
-    width: 50%;
+    width: calc(100% / 6);
     margin-bottom: 20px;    
-    padding: 0px 5px;
+    padding: 0px 5px;    
+    text-align: center;
+    position: relative;
 }
-.homepage .why .side ul li:nth-child(2n+1){
-    clear: left;
+.homepage .why .side ul li .content{
+    height: 190px;
+    padding: 10px;
+    padding-top: 15px;
+    background: #8dd842;
+    position: absolute;
+    top: 30px;
+    border-radius: 8px;
 }
 .homepage .why .side ul li .icon{
     background-color: rgb(141, 216, 66);
@@ -331,13 +354,16 @@ h2{
     height: 63px;
     position: relative;
     border-radius: 50px;
-    transition: 0.8s;
+    left: 50%;
+    z-index: 99;
+    transform: translateX(-50%);
+/*    transition: 0.8s;
     transform-style: preserve-3d;
-    transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);*/
 }
-.homepage .why .side ul li:hover .icon{
+/*.homepage .why .side ul li:hover .icon{
     transform: rotate3d(0, 45, 0, 360deg);
-}
+}*/
 .homepage .why .side ul li .icon img{
     width: 100%;    
     padding: 10px;
@@ -355,38 +381,21 @@ h2{
 }
 
 
-
+.homepage .products{
+    margin-top: 60px;
+}
+.homepage .products .container{
+    padding-top: 0px;
+}
 .homepage .products .container .title{
     margin-top: 30px;
     margin-bottom: 30px;
 }
 .homepage .products .container .title h2{
     position: relative;
-    width: fit-content;
+    text-align: left;
+    width: 100%;
     margin: 0 auto;
-}
-.homepage .products .container .title h2:before{
-    content: '';
-    background: url(../default/img/homepage/t-left.png) no-repeat;
-    background-size: 100%;
-    position: absolute;
-    left: 0px;
-    width: 178px;
-    height: 3px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -200px;
-}
-.homepage .products .container .title h2:after{
-    content: '';
-    background: url(../default/img/homepage/t-right.png) no-repeat;
-    background-size: 100%;
-    position: absolute;
-    right: -200px;
-    width: 178px;
-    height: 3px;
-    top: 50%;
-    transform: translateY(-50%);
 }
 .homepage .products .container{
     overflow: hidden;    
@@ -440,13 +449,7 @@ h2{
 .homepage .products .container .gkImage:hover{
         box-shadow: 0px 8px 33px 0px rgba(0, 0, 0, 0.13);
 }
-.homepage .products .container .gkImage > a{
-    position: absolute;
-    top: -100px;
-    transition: all .6s ease-out;
-    left: 50%;
-    transform: translate(-50% , -50%);
-}
+
 .homepage .products .container .gkImage > a:hover{
     text-decoration: none;
 }
