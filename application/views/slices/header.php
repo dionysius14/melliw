@@ -1,7 +1,44 @@
 <div class="header">
     <div class="upper">
       <div class="container">
-        <!--div id="google_translate_element"></div-->
+        <div class="language">
+          <div class="selected">
+            <?php if($this->session->userdata('site_lang') == 'english'):?>
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
+            <?php endif ?>
+            <?php if($this->session->userdata('site_lang') == 'indo'):?>
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
+            <?php endif ?>
+            <?php if($this->session->userdata('site_lang') == 'chinese'):?>
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
+            <?php endif ?>
+          </div>
+          <ul>
+            <li id="english">
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
+            </li>
+            <li id="indo">
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
+            </li>
+            <li id="chinese">
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
+            </li>
+          </ul>
+        </div>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('.language li').on("click", function(){
+              var id = $(this).attr('id');
+              var image = $(this).attr('src');
+              console.log(id);
+              javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/'+id;
+              $('.language-switcher .language-selector').val(id).click();
+            });
+            $('.language .selected').on("click", function(){
+              $(this).siblings().toggleClass('open');
+            });
+          });
+        </script>
       </div>
     </div>
     <div class="middle">
@@ -30,32 +67,18 @@
                </li>
                <li class="list-menu category">
                   <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>"><?php echo $this->lang->line('menu_news'); ?></a>
+               </li>           
+               <li class="list-menu category">
+                  <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("howto"); ?>"><?php echo $this->lang->line('menu_howto'); ?></a>
                </li>
-               <li class="list-menu about">
+               <li class="list-menu category">
+                  <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("faq"); ?>"><?php echo $this->lang->line('menu_faq'); ?></a>
+               </li>
+                <li class="list-menu about">
                   <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>"><?php echo $this->lang->line('menu_profile'); ?></a>
+                </li>
             </ul>
-            <div class="language-switcher">
-               <select onchange="javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/'+this.value;">
-                 <option value="english" <?php if($this->session->userdata('site_lang') == 'english') echo 'selected="selected"'; ?>>English</option>
-                 <option value="indo" <?php if($this->session->userdata('site_lang') == 'indo') echo 'selected="selected"'; ?>>Indonesia</option>
-                 <option value="chinese" <?php if($this->session->userdata('site_lang') == 'chinese') echo 'selected="selected"'; ?>>Chinese</option>
-              </select>
-              
             </div>
-<!--             <div class="download">
-              <ul>
-                <li>
-                  <a target="blank" href="<?php echo base_url(); ?>assets/uploads/catalog/<?php echo $profile->catalog; ?>">
-                    <span>Download Katalog</span>
-                  </a>
-                </li>
-                <li>
-                  <?php echo form_open('ourproduct/search', 'id="form_add"'); ?>
-                  <input type="text" id="filter" name="filter" class="form-control" placeholder="Cari Produk">
-                  <?php echo form_close(); ?>
-                </li>
-              </ul>
-            </div> -->
           </div>
        </div>
       </div>
