@@ -25,9 +25,58 @@ h1, h2, h3, h4{
     background: #8dd842;
     padding: 10px 85px;
 }
-.header .upper .container{
-    overflow: hidden;
+.header .upper .container .language{
+    width: auto;
     position: relative;
+}
+.header .upper .container {
+    overflow: initial;
+}
+.header .upper .container .language .selected{
+    cursor: pointer;
+    text-align: right;
+}
+.header .upper .container .language .selected img{
+    width: 50px;
+    height: 25px;
+}
+.header .upper .container .language ul{
+    display: none;
+    list-style: none;
+    padding: 0px;
+}
+.header .upper .container .language ul.open{
+    display: block;
+    position: absolute;
+    background: #8dd842;
+    z-index: 99;
+    padding: 10px;
+    border: 1px solid #23380f;
+    top: 35px;
+    right: 0;
+}
+.header .upper .container .language ul.open:before{
+    display: block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    top: -6px;
+    right: 5px;
+    position: absolute;
+    background: #8dd842;
+    border-top: 1px solid #23380f;
+    border-right: 1px solid #23380f;
+    transform: rotate(-46deg);
+}
+.header .upper .container .language ul li{
+    cursor: pointer;
+    max-width: 50px;
+    max-height: 25px;
+    margin-bottom: 5px;
+}
+.header .upper .container .language ul li img{
+    width: 50px;
+    height: 25px;
 }
 
 .header div.info{
@@ -80,75 +129,6 @@ h1, h2, h3, h4{
     font-size: 20px;
     color: #70a942;
 }
-
-.header .upper .container > div{
-    width: calc(100%/2);
-    float: left;
-    text-align: center;
-}
-.header .upper .container > div.social{
-    float: right;
-}
-.header .upper .container > div#google_translate_element{
-    text-align: right;
-}
-.header .upper .container .social ul{
-    list-style: none;
-    overflow: hidden;    
-    margin-bottom: 0px;
-}
-.header .upper .container .social ul li{
-    width: 31px;
-    height: 31px;
-    float: right;    
-    margin-right: 20px;
-}
-.header .upper .container .social ul li a{
-    border: 1px solid #2F2C2C;
-    width: 30px;
-    padding: 3px 5px;
-    border-radius: 22px;
-    display: block;
-    color: #2F2C2C;
-    font-size: 16px;
-}
-.header .upper .container .text-above .whatsapp{
-    position: relative;    
-    display: block;
-    height: 30px;
-}
-.header .upper .container .text-above .whatsapp{
-    text-align: left;
-    color: black;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
-    line-height: 30px;
-}
-.header .upper .container .text-above .whatsapp .whatsapp-icon{
-    width: 170px;
-    display: block;
-    height: 30px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.header .upper .container .text-above .whatsapp .whatsapp-icon strong{
-    line-height: 30px;
-    position: absolute;
-    left: 40px;
-    color: #2e2a2b;
-}
-.header .upper .container .text-above .whatsapp .whatsapp-icon:before{
-    content: '';
-    background: url(../default/img/whatsapp.png) no-repeat;
-    background-size: 100%;
-    position: absolute;
-    left: 0px;
-    width: 30px;
-    height: 30px;
-}
-
 .header .middle{
     transition: all 0.4s ease-in-out 0s;
     z-index: 999;
@@ -180,15 +160,10 @@ h1, h2, h3, h4{
     padding: 10px 10px;
     width: 100%;
 }
-.header  .middle .header-menu .container .language-switcher{
-    line-height: 40px;
-    margin-left: 20px;
-    float: left;
-}
 .header .header-menu .navbar-nav{
     display: block;
     margin-bottom: 0px;
-    float: left;
+    float: right;
 }
 .header .header-menu .navbar-nav li{
     padding-top: 0px;
@@ -1255,7 +1230,6 @@ h2{
         font-size: 12px;
     }
     .header .upper .container {
-        overflow: hidden;
         padding: 0px;
     }
 }
