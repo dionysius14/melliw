@@ -6,6 +6,9 @@
             <?php if($this->session->userdata('site_lang') == 'english'):?>
               <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
             <?php endif ?>
+            <?php if($this->session->userdata('site_lang') == ''):?>
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
+            <?php endif ?>
             <?php if($this->session->userdata('site_lang') == 'indo'):?>
               <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
             <?php endif ?>
@@ -77,6 +80,9 @@
                 <li class="list-menu about">
                   <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>"><?php echo $this->lang->line('menu_profile'); ?></a>
                 </li>
+                 <li class="list-menu category">
+                    <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>"><?php echo $this->lang->line('menu_contact'); ?></a>
+                 </li>
             </ul>
             </div>
           </div>
