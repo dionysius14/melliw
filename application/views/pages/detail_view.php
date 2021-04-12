@@ -14,8 +14,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="detailproduct container">
 				<div class="side detail">
 					<h1 align="left" ><?php echo $detail->nama; ?></h1>
+					<div class="sertificate"><p>Product Sertificate : lorem ipsum</p></div>
 					<?php if($detail->harga_jual > 0 ){ ?>
-						<span class="price old"><del><?php echo '<b>Rp ' . number_format($detail->harga, 0, ',', '.') . '</b>' ?></del></span>
+						<span class="price old"><del><?php echo '<b>Rp ' . number_format($detail->harga, 0, ',', '.') .'/'.$detail->satuan. '</b>' ?></del></span>
 						<span class="price final"><?php echo '<b>Rp ' . number_format($detail->harga_jual, 0, ',', '.') .'/'.$detail->satuan. '</b>'?></span>
 					<?php }else{ ?>
 						<span class="price final"><?php echo '<b>Rp ' . number_format($detail->harga, 0, ',', '.') .'/'.$detail->satuan. '</b>' ?></span>
