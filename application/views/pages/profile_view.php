@@ -3,9 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="container">
-	<h1>PT Melliw Group</h1>
 	<div class="profile container">
-	  	<img src="https://cdn.wallpapersafari.com/52/16/G0HyD6.jpg">
+		<img src="<?php echo base_url(); ?>assets/uploads/banner_profile.jpg">
 		<div class="content">
 			<?php echo $profile->profile_ket; ?>
 		</div>

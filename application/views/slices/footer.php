@@ -2,7 +2,7 @@
     <div class="footer">
     	<div class="container">
 			<div class="row about">
-				<h3>About Melliw</h3>			
+				<h3>PT Melliw Tani Organik</h3>			
 				<div>
 					<?php
 						$overview = $profile->overview;
