@@ -2,13 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<div class="news container">
+<div class="news list container">
 	<div class="content">
+	    <h1>News</h1>
 		<div class="news-container">
 		<?php foreach($news as $nw){?>
 			<div class="news-items">
 				<div class="item">
-					<h2 ><?php 
+					<h2 ><a href="<?php echo site_url("newsdetail?id=".$nw->news_id.""); ?>"><?php 
 					$judul = $nw->news_judul;
 					$konten = $nw->news_konten;
 					if($this->session->userdata('site_lang') == 'english'){
@@ -18,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$judul = $nw->news_judul_ch;
 						$konten = $nw->news_konten_ch;
 					}
-					echo $judul ?></h2>
+					echo $judul ?></a></h2>
 					<div class="date">
 						<span><?php echo date('d M Y',strtotime($nw->news_date)); ?></span>
 					</div>
@@ -37,11 +38,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             } else
                                 $string = substr($string, 0, strrpos($string, ' ')) . '... ';
                             echo $string;
-                            ?>
+                            ?><a href="<?php echo site_url("newsdetail?id=".$nw->news_id.""); ?>">View All</a>
 						</p>
-					</div>
-					<div class="viewall">
-						<span><a href="<?php echo site_url("newsdetail?id=".$nw->news_id.""); ?>">View All</a></span>
 					</div>
 				</div>
 			</div>
