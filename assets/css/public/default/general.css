@@ -18,6 +18,20 @@ h1, h2, h3, h4{
     width: 100%;    
     padding: 0px 15px;
 }
+.container .back{
+    padding-left: 15px;
+}
+.container .back a{
+    background: rgba(141, 216, 66, 0.6);
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    display: block;
+    clear: both;
+    max-width: 117px;
+    margin-top: 10px;
+    border: 0px;
+}
 .header{
     margin-bottom: 20px;
 }
@@ -730,8 +744,11 @@ h2{
     margin-top: 20px;
 }
 .detailproduct .side .price{
-    display: block;
-    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.detailproduct .side .price.old{
+    font-size: 14px;
 }
 
 
