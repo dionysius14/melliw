@@ -21,8 +21,16 @@
 						<li>
 							<span><?php echo $this->lang->line('footer_text_contact'); ?></span>
 						</li>
+						<li class="whatsapp">
+	              			<img src="<?php echo base_url(); ?>\assets\css\public\default\img\wa-green.png">
+							<span>
+								<a class="whatsapp" target="blank" href="<?php echo $profile->link_wa; ?>" >
+								  +<?php echo $profile->phone; ?>
+								</a>
+							</span>
+						</li>
 						<li>
-							<i class="icon-phone"></i><span><?php echo $profile->phone; ?></span>
+							<i class="icon-phone"></i><span><a href="tel:<?php echo $profile->phone; ?>"><?php echo "+". $profile->phone; ?></a></span>
 						</li>
 						<li>
 							<i class="icon-globe"></i><span><?php echo $profile->headoffice; ?></span>

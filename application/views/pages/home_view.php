@@ -133,6 +133,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<a href="<?php echo site_url("ourproduct"); ?>">Show All</a>
 			</div>
 		</div>
+		<div class="our-client">
+			<div class="container">
+				<div class="title">
+					<h2>Our Client</h2>
+				</div>
+				<div class="client">
+					<div class="item">
+						<span>
+	              			<img src="<?php echo base_url(); ?>\assets\css\public\default\img\carrefour-logo.png">
+	              		</span>
+              		</div>
+					<div class="item">
+						<span>
+	              			<img src="<?php echo base_url(); ?>\assets\css\public\default\img\superindo-logo.png">
+	              		</span>
+              		</div>
+					<div class="item">
+						<span>
+	              			<img src="<?php echo base_url(); ?>\assets\css\public\default\img\ranch-logo.png">
+	              		</span>
+              		</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
