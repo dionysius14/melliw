@@ -122,7 +122,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 							</a>
 							<div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div>
-							<div class="sertificate"><p>Product Sertificate : lorem ipsum</p></div>
+							<div class="sertificate"><p>Product Sertificate : <?php echo $dtl->sertifikat; ?></p></div>
 							<div class="prod-price">
 							<?php if($dtl->harga_jual > 0 ){ ?>
 								<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></del></span>

@@ -132,6 +132,7 @@ class Admin extends CI_Controller {
         $gc->display_as('nama', 'Nama');
         $gc->display_as('banner', 'Banner');
         $gc->display_as('deskripsi', 'Deskripsi');
+        $gc->display_as('sertifikat', 'Sertifikat');
         $gc->display_as('harga', 'Harga');
         $gc->display_as('harga_jual', 'Harga Diskon');
         $gc->display_as('satuan', 'Satuan');
