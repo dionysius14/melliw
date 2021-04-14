@@ -244,9 +244,6 @@ h1, h2, h3, h4{
 }
 
 
-.footer-container{
-    margin-top: 20px;
-}
 .footer-container .footer{
     background: #0D2A0D;
     height: auto;
@@ -324,19 +321,19 @@ h1, h2, h3, h4{
 /*homepage*/
 
 h1{
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     margin-top: 40px;
     font-size: 30px;
     font-weight: 700;
 }
 h2{
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: 700;
 }
 .homepage h4{
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .homepage .slider img{
@@ -345,40 +342,59 @@ h2{
 .homepage .slider .bx-wrapper{
     margin-bottom: 0px;
 }
+.homepage .why{
+    background: #16293a;
+    padding-bottom: 40px;
+}
 .homepage .why .container{
-       position: relative;
+    position: relative;
+    border-top: 5px solid #80B643;
+    padding-top: 2px;
 }
-.homepage .why .side{
-    float: left;    
-    margin-top: 20px;
-    width: 50%;
-    font-family: "Roboto";
+.homepage .why .container .title{
+    display: flex;
+    color: #80B643;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
-.homepage .why .side ul{
+.homepage .why .container .title h2{
+    font-size: 26px;
+    width: 20%;
+}
+.homepage .why .container .title .overview{
+    line-height: initial;
+    width: 80%;
+    margin-top: 19px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.homepage .why ul{
     list-style: none;
-    position: absolute;
-    top: -90px;
-    left: 0px;
+    position: relative;
     width: 100%;
 }
-.homepage .why .side ul li{
+.homepage .why ul li{
     float: left;
-    width: calc(100% / 6);
-    margin-bottom: 20px;    
-    padding: 0px 5px;    
+    width: calc(100% / 3);
+    margin-bottom: 20px;
+    padding: 0px 45px;
     text-align: center;
     position: relative;
 }
-.homepage .why .side ul li .content{
-    height: 190px;
+.homepage .why ul li .content{
+    height: 430px;
     padding: 10px;
     padding-top: 15px;
-    background: #8dd842;
-    position: absolute;
-    top: 30px;
-    border-radius: 8px;
+    background: white;
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
 }
-.homepage .why .side ul li .icon{
+.homepage .why ul li .content .image img{
+    width: 60%;
+    margin-top: -50px;
+}
+.homepage .why ul li .icon{
     background-color: rgb(141, 216, 66);
     width: 63px;
     height: 63px;
@@ -394,53 +410,102 @@ h2{
 /*.homepage .why .side ul li:hover .icon{
     transform: rotate3d(0, 45, 0, 360deg);
 }*/
-.homepage .why .side ul li .icon img{
+
+.homepage .why ul li:hover .content{
+    box-shadow: -9px 8px 0px 0px rgb(128 182 67);
+    -webkit-box-shadow: -9px 8px 0px 0px rgb(128 182 67);
+    -moz-box-shadow: -9px 8px 0px 0px rgba(250,167,34,0.75);
+    transition: 0.2s ease all;
+    background: transparent;
+    border: 1px solid rgb(128 182 67);
+    color: white;
+    padding-top: 100px;
+
+}
+.homepage .why ul li:hover .content .image img{
+    display: none;
+    transition: 0.2s ease all;
+}
+.homepage .why ul li:hover .content .icon{
+    top: -10%;
+    width: 100px;
+    height: 100px;
+    transition: 0.2s ease all;
+}
+
+.homepage .why ul li .icon{
+   top: -100px;
+}
+.homepage .why ul li .icon img{
     width: 100%;    
     padding: 10px;
     transition: 0.4s;
 }
-.homepage .why .side ul li .icon .fa{
+.homepage .why ul li .icon .fa{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.homepage .why .side ul li .icon .fa:before{
+.homepage .why ul li .icon .fa:before{
     font-size: 35px;
     color: white;
 }
 
 
 .homepage .products{
-    margin-top: 20px;
+    background: white;
+    position: relative;
+}
+.homepage .products:after{
+    display: block;
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    bottom: 0;
+    content: '';
     background: #16293A;
+    z-index: 0;
 }
 .homepage .products .container{
     padding-top: 0px;
 }
 .homepage .products .container .title{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 .homepage .products .container .title h2{
     position: relative;
     text-align: left;
     width: 100%;
     margin: 0 auto;
+    color: #16293A;
 }
 .homepage .products .container{
     overflow: hidden;   
     text-align: center;
 }
 .homepage .products .container > a{
-    background: rgba(141, 216, 66, 0.6);
-    color: white;
-    padding: 5px 15px;
+    background: rgb(250,167,34);
+    color: black;
+    font-weight: 700;
+    padding: 10px 15px;
     text-align: center;
     display: block;
     clear: both;
-    max-width: 100px;
+    max-width: 200px;
     margin: 0 auto;
     margin-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 9;
+}
+.homepage .products .container > a:hover{
+    box-shadow: -9px 8px 0px 0px rgb(22 41 58);
+    -webkit-box-shadow: -9px 8px 0px 0px rgb(22 41 58);
+    -moz-box-shadow: -9px 8px 0px 0px rgba(250,167,34,0.75);
+    transition: 0.2s ease all;
+    text-decoration: none;
 }
 .homepage .products .container .gkImage{
     width: calc(100% / 4);
@@ -451,6 +516,16 @@ h2{
     padding-top: 2em;
     position: relative;
     overflow: hidden;
+    z-index: 99;
+}
+.homepage .products .container .gkImage .sertificate{
+    position: absolute;
+    top: 28px;
+    left: 25px;
+    padding: 10px;
+    background: #8dd842;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #0d2a0d;
 }
 .homepage .products .container .gkImage:nth-child(5n+1){
     clear: left;
@@ -459,7 +534,13 @@ h2{
 .homepage .products .container .gkImage img{
     width: 100%;
 }
-.homepage .products .container .gkImage:hover{
+.homepage .products .container .gkImage .product-container{
+    background: white;
+    border: 1px solid #16293a;
+    padding: 20px;
+}
+
+.homepage .products .container .gkImage:hover .product-container{
     box-shadow: -9px 8px 0px 0px rgba(250,167,34,0.75);
     -webkit-box-shadow: -9px 8px 0px 0px rgba(250,167,34,0.75);
     -moz-box-shadow: -9px 8px 0px 0px rgba(250,167,34,0.75);
@@ -486,7 +567,8 @@ h2{
 }
 
 .homepage .products .container .gkImage .text{
-    text-align: center;
+    text-align: center;    
+    min-height: 120px;
 }
 .homepage .products .container .gkImage .text h4{
     font-weight: 700;
@@ -494,11 +576,13 @@ h2{
     font-size: 20px;
 }
 .homepage .products .container .gkImage .text .prod-price span{
-    color: #a59a00;
+    color: #85c13f;
     font-weight: 700;
     letter-spacing: 2px;
-    font-size: 20px;
-    display: block;
+    font-size: 18px;
+}
+.homepage .products .container .gkImage .text .prod-price span.old{
+    font-size: 14px;
 }
 .homepage .products .container .gkImage .text .prod-price span.old{
     color: #777777;
@@ -509,7 +593,14 @@ h2{
     color: white;
     padding-bottom: 40px;
     position: relative;
+    height: 450px;
     overflow: hidden;
+}
+.homepage .our-client > .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .homepage .our-client> img{
     position: absolute;
@@ -532,6 +623,8 @@ h2{
 .homepage .our-client .title{
     text-align: center;
     margin-bottom: 20px;
+    z-index: 99;
+    position: relative;
 }
 .homepage .our-client .client{
     display: flex;
