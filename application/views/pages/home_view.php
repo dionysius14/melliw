@@ -109,7 +109,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\leaf.png">
 								</div>
 								<div class="image">
-									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
 								</div>
 								<h2>Lahan</h2>
 								<div class="smue-service-box-content-section">
@@ -123,7 +123,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<i class="fa fa-users"></i>
 								</div>
 								<div class="image">
-									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
 								</div>
 								<h2>Trained Farmers</h2>
 								<div class="smue-service-box-content-section">
@@ -137,7 +137,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<i class="fa fa-users"></i>
 								</div>
 								<div class="image">
-									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
 								</div>
 								<h2>Expert QC</h2>
 								<div class="smue-service-box-content-section">
@@ -151,7 +151,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\so-logo.png">
 								</div>
 								<div class="image">
-									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
 								</div>
 								<h2>Long Lasting</h2>
 								<div class="smue-service-box-content-section">
@@ -165,7 +165,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<i class="fa fa-truck"></i>
 								</div>
 								<div class="image">
-									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
 								</div>
 								<h2>Great Samples</h2>
 								<div class="smue-service-box-content-section">
@@ -179,7 +179,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<i class="fa fa-truck"></i>
 								</div>
 								<div class="image">
-									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
 								</div>
 								<h2>Affordable</h2>
 								<div class="smue-service-box-content-section">
