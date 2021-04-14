@@ -10,7 +10,7 @@
           <div class="container">
             <div class="logo-mobile">
               <a href="<?php echo base_url(); ?>">
-                  <img src="<?php echo base_url(); ?>\assets\css\public\default\img\sayfresh-logo.png">
+                  <img src="<?php echo base_url(); ?>\assets\css\public\default\img\melliw-logo-small.png">
               </a>
             </div>
             <div class="mobile-menu">

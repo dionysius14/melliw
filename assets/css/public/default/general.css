@@ -341,6 +341,7 @@ h2{
 }
 .homepage .slider .bx-wrapper{
     margin-bottom: 0px;
+    border: 0px;
 }
 .homepage .why{
     background: #16293a;
@@ -392,7 +393,7 @@ h2{
 }
 .homepage .why ul li .content .image img{
     width: 60%;
-    margin-top: -50px;
+    margin-top: 0px;
 }
 .homepage .why ul li .icon{
     background-color: rgb(141, 216, 66);
@@ -1070,6 +1071,9 @@ h2{
     .header div.info ul li a{
         font-size: 12px;
     }
+    .header .middle div.logo img{
+        max-width: 110px;
+    }
     .header .header-menu .download{
         width: 100%;
         right: 0px;
@@ -1089,60 +1093,52 @@ h2{
         right: 10px;
         top: -52px;
     }
+    .homepage .why ul li .content{
+        height: 350px;
+    }
 }
 @media only screen and (max-width: 1023px) {
-    .header .upper {
-        padding: 5px 10px;
+    .header .middle > .container{
+        display: block;
+        padding-top: 20px;
+    }
+    .header .middle .language{
+        top: 20px;
+        transform: none;
     }
     .header .middle .container div{
         width: 100%;
         float: none;
         position: relative;
         top: 0px;
+        right: unset;
+        top: unset;
+        left: unset;
         transform: none;    
         max-width: 100%;
     }
     .header .middle .container div.logo{
-        text-align: center;    
-        margin-bottom: 20px;
+        display: none;
+    }
+    .header .middle .header-menu .container{
+        padding: 0px;
     }
     .header .header-menu .navbar-nav{
         float: none;
-    }
-    .header .header-menu .download{
-        display: block;
-        float: none;
-        position: relative;
-        top: 0px;
+        width: 655px;
+        margin: 0 auto;
         margin-top: 20px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        left: 0;
     }
-    .header .header-menu .download{
-        padding: 0px;
+    .header .header-menu .navbar-nav li a{
+        font-size: 16px;
     }
-    .header .header-menu .download li:first-child {
-        position: relative;
-        right: 10px;
-        top: 0px;    
-        padding: 7px;
+    .header .header-menu .logo-mobile{
+        display: block;
+        text-align: center;
     }
-
-    /*header revisi*/
-    .header .header-menu .download li:first-child {
-        padding: 9px 5px;
-        width: 120px;
-        font-size: 11px;
-    }
-
-
-    .header .header-menu .download li:last-child{
-        width: 75%;
-        max-width: 100%;
-        float: left;
-        margin: 0px;    
-        margin-top: 3px;
+    .header .header-menu .logo-mobile img{
+        width: 100%;
+        max-width: 70px;
     }
 
 
@@ -1173,6 +1169,9 @@ h2{
     }
     .news .content .news-container .news-items.well .item .news-desc img{
         margin-bottom: 20px;
+    }
+    .homepage .why ul li{
+        width: calc(100% / 2);
     }
 }
 
@@ -1286,8 +1285,12 @@ h2{
         margin-top: 60px;
         display: none;
     }
+    .header .middle .language{
+        top: 105px;
+    }
     .header .header-menu.active .navbar-nav {
         display: block;
+        width: 100%;
     }
     .header .header-menu .navbar-nav li{
         padding-top: 0px;
@@ -1307,6 +1310,13 @@ h2{
     .contact-us .content {
         width: 100%;
     }
+    .homepage .why ul li{
+        width: 100%;
+    }
+    .homepage .why ul li .content .image img{
+        width: 40%;
+        margin-top: -34px;
+    }
 }
 
 @media only screen and (max-width: 639px) {
@@ -1314,6 +1324,9 @@ h2{
     .footer-container .footer .container > .row{
         width: 100%;    
         margin-bottom: 5px;
+    }
+    .footer-container .footer .container > .row.about{
+        margin-top: 0px;
     }
     .bx-wrapper {
         margin-bottom: 0px;
@@ -1355,9 +1368,26 @@ h2{
         top: initial;
         transform: none;
     }
+    .homepage .our-client{
+        height: 510px;
+    }
+    .homepage .our-client .client{
+        display: block;
+    }
+    .homepage .our-client .client .item img{
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 479px) {
+    .homepage .why .container .title{
+        text-align: center;
+        display: block;
+    }
+    .homepage .why .container .title h2,
+    .homepage .why .container .title .overview{
+        width: 100%;
+    }
     .homepage .homepage-container .slider .bx-wrapper .bx-viewport {
         min-height: 80px !important;
     }    
