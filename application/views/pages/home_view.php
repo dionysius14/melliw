@@ -7,7 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="slider">
 			<ul class="bxslider">
 				<?php foreach($slider as $sld){?>
-				<li><a href="<?php echo $sld->banner_link; ?>"><img src="<?php echo base_url(); ?>assets/uploads/slider/<?php echo $sld->banner_foto; ?>" /></a></li>
+				<li>
+					<a href="<?php echo $sld->banner_link; ?>"><img src="<?php echo base_url(); ?>assets/uploads/slider/<?php echo $sld->banner_foto; ?>" /></a>
+				</li>
 				<?php } ?>
 			</ul>
 		</div>	
@@ -31,113 +33,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				}
 			});
 		</script>
-		<div class="why">
-			<div class="container">
-				<div class="side">
-					<ul>
-						<li>
-							<div class="icon">
-								<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\leaf.png">
-							</div>
-							<div class="content">
-								<h2>Lahan</h2>
-								<div class="smue-service-box-content-section">
-									<p>Melliw Berdiri di atas lahan subur seluas lebih dari 30 hektar yang siap kami jadikan penghasil komodity unggulan</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="icon">
-									<i class="fa fa-users"></i>
-							</div>
-							<div class="content">
-								<h2>Trained Farmers</h2>
-								<div class="smue-service-box-content-section">
-									<p>Melliw mempunyai training program swadaya untuk meningkatkan kualitas SDM petani</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="icon">
-									<i class="fa fa-users"></i>
-							</div>
-							<div class="content">
-								<h2>Expert QC</h2>
-								<div class="smue-service-box-content-section">
-									<p>Melliw punya jajaran Quality Control yang paham standard international</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="icon">
-									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\so-logo.png">
-							</div>
-							<div class="content">
-								<h2>Long Lasting</h2>
-								<div class="smue-service-box-content-section">
-									<p>Melliw berorientasi ke bisnis berelanjutan jangka panjang</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="icon">
-									<i class="fa fa-truck"></i>
-							</div>
-							<div class="content">
-								<h2>Great Samples</h2>
-								<div class="smue-service-box-content-section">
-									<p>Sample yang kami kirim sesuai dengan barang yang dikirim</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="icon">
-									<i class="fa fa-truck"></i>
-							</div>
-							<div class="content">
-								<h2>Affordable</h2>
-								<div class="smue-service-box-content-section">
-									<p>Langsung produsen sehingga harga lebih terjangkau</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="products">
-			<div class="container">
-				<div class="title">
-					<h2>Featured Products</h2>
-				</div>
-				<?php foreach($latest as $dtl){?>
-				<div class="gkImage">
-					<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
-						<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
-					</a>
-						<div class="text">
-							<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
-								<div class="prod-name">
-									<h4><?php echo $dtl->nama; ?></h4>
-								</div>
-							</a>
-							<div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div>
-							<div class="sertificate"><p>Product Sertificate : <?php echo $dtl->sertifikat; ?></p></div>
-							<div class="prod-price">
-							<?php if($dtl->harga_jual > 0 ){ ?>
-								<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></del></span>
-								<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') .'/'.$dtl->satuan. '</b>'?></span>
-							<?php }else{ ?>
-								<span class="old"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></span>
-							<?php } ?>
-							</div>
-						</div>
-				</div>
-				<?php } ?>
-				<a href="<?php echo site_url("ourproduct"); ?>">Show All</a>
-			</div>
-		</div>
 		<div class="our-client">
+				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\forest.jpg">
 			<div class="container">
 				<div class="title">
 					<h2>Our Client</h2>
@@ -158,6 +55,139 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	              			<img src="<?php echo base_url(); ?>\assets\css\public\default\img\ranch-logo.png">
 	              		</span>
               		</div>
+				</div>
+			</div>
+		</div>
+		<div class="products">
+			<div class="container">
+				<div class="title">
+					<h2>Featured Products</h2>
+				</div>
+				<?php foreach($latest as $dtl){?>
+				<div class="gkImage">
+					<div class="sertificate"><?php echo $dtl->sertifikat; ?></div>
+					<div class="product-container">
+						<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+							<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
+						</a>
+						<div class="text">
+							<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+								<div class="prod-name">
+									<h4><?php echo $dtl->nama; ?></h4>
+								</div>
+							</a>
+							<div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div>
+							<div class="prod-price">
+							<?php if($dtl->harga_jual > 0 ){ ?>
+								<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></del></span>
+								<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') .'/'.$dtl->satuan. '</b>'?></span>
+							<?php }else{ ?>
+								<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></span>
+							<?php } ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php } ?>
+				<a href="<?php echo site_url("ourproduct"); ?>">Show All</a>
+			</div>
+		</div>
+
+		<div class="why">
+			<div class="container">
+				<div class="title">
+					<h2>Bisnis Melliw</h2>
+					<div class="overview">
+						Melliw menyediakan produk dan layanan dari hulu hingga hilir untuk agrokomplek dengan berfokus pada produksi pangan yang berkelanjutan
+					</div>
+				</div>
+				<div>
+					<ul>
+						<li>
+							<div class="content">
+								<div class="icon">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\leaf.png">
+								</div>
+								<div class="image">
+									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+								</div>
+								<h2>Lahan</h2>
+								<div class="smue-service-box-content-section">
+									<p>Melliw Berdiri di atas lahan subur seluas lebih dari 30 hektar yang siap kami jadikan penghasil komodity unggulan</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="icon">
+										<i class="fa fa-users"></i>
+								</div>
+								<div class="image">
+									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+								</div>
+								<h2>Trained Farmers</h2>
+								<div class="smue-service-box-content-section">
+									<p>Melliw mempunyai training program swadaya untuk meningkatkan kualitas SDM petani</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="icon">
+										<i class="fa fa-users"></i>
+								</div>
+								<div class="image">
+									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+								</div>
+								<h2>Expert QC</h2>
+								<div class="smue-service-box-content-section">
+									<p>Melliw punya jajaran Quality Control yang paham standard international</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="icon">
+										<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\so-logo.png">
+								</div>
+								<div class="image">
+									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+								</div>
+								<h2>Long Lasting</h2>
+								<div class="smue-service-box-content-section">
+									<p>Melliw berorientasi ke bisnis berelanjutan jangka panjang</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="icon">
+										<i class="fa fa-truck"></i>
+								</div>
+								<div class="image">
+									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+								</div>
+								<h2>Great Samples</h2>
+								<div class="smue-service-box-content-section">
+									<p>Sample yang kami kirim sesuai dengan barang yang dikirim</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="icon">
+										<i class="fa fa-truck"></i>
+								</div>
+								<div class="image">
+									<img src="https://indmira.com/wp-content/uploads/2021/04/aha_photo.jpg">
+								</div>
+								<h2>Affordable</h2>
+								<div class="smue-service-box-content-section">
+									<p>Langsung produsen sehingga harga lebih terjangkau</p>
+								</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

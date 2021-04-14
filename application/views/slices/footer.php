@@ -1,7 +1,13 @@
 <div class="footer-container">
     <div class="footer">
     	<div class="container">
-			<div class="row about">
+			<div class="row">
+		        <div class="logo">
+		          <a href="<?php echo base_url(); ?>">
+		              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\melliw-logo-small.png">
+		          </a>
+		        </div>
+
 				<h3>PT Melliw Tani Organik</h3>			
 				<div>
 					<?php
@@ -14,38 +20,67 @@
 					 echo $overview; ?>
 				</div>
 			</div>
-			<div class="row contact">
-				<h3>Contact</h3>			
+			<div class="row about">
+				<h3>Our Company</h3>			
 				<div>
 					<ul>
 						<li>
-							<span><?php echo $this->lang->line('footer_text_contact'); ?></span>
-						</li>
-						<li class="whatsapp">
-	              			<img src="<?php echo base_url(); ?>\assets\css\public\default\img\wa-green.png">
-							<span>
-								<a class="whatsapp" target="blank" href="<?php echo $profile->link_wa; ?>" >
-								  +<?php echo $profile->phone; ?>
-								</a>
-							</span>
+							<a href="">Contact Us</a>
 						</li>
 						<li>
-							<i class="icon-phone"></i><span><a href="tel:<?php echo $profile->phone; ?>"><?php echo "+". $profile->phone; ?></a></span>
+							<a href="">Faq</a>
 						</li>
 						<li>
-							<i class="icon-globe"></i><span><?php echo $profile->headoffice; ?></span>
+							<a href="">How To Order</a>
 						</li>
 						<li>
-		              		<i class="icon-envelope"></i><span><?php echo $profile->email; ?></span>
-						</li>
-						<li>
-				              <i class="icon-time"></i>
-				              <span><p><?php echo $profile->working_time; ?></p></span>
+							<a href="">News</a>
 						</li>
 					</ul>
 				</div>
+				
+			</div>
+			<div class="row about">
+				<p>
+					Jalan Kaliurang <br>
+					Pakem, Sleman, Yogyakarta <br>
+					55582 <br>
+
+				  <?php echo "+". $profile->phone; ?><br>
+				  <br>
+				  <a href="mailto:<?php echo $profile->email; ?>"><?php echo $profile->email; ?></a><br><br>
+				</p>
+				<div class="social-icon">
+		          <ul>
+		            <li>
+		            	<a href="https://id.linkedin.com/">
+		              		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\linkedin_icon.svg">
+			            </a>
+			        </li>
+		            <li>
+		            	<a href="https://www.instagram.com/">
+		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\instagram_icon.svg">
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="https://www.facebook.com/">
+		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\facebook_icon.svg">
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="https://twitter.com/">
+		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\twitter_icon.svg">
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="https://www.youtube.com/">
+		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\youtube_icon.svg">
+		            	</a>
+		            </li>
+		          </ul>
+		        </div>
 			</div>
     	</div>
     </div>
-    <div class="copyright">Copyright 2021 All Right Reserved</div>
+    <div class="copyright">Melliw 2021 All Right Reserved</div>
 </div>

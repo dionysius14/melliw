@@ -1,49 +1,4 @@
 <div class="header">
-    <div class="upper">
-      <div class="container">
-        <div class="language">
-          <div class="selected">
-            <?php if($this->session->userdata('site_lang') == 'english'):?>
-              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
-            <?php endif ?>
-            <?php if($this->session->userdata('site_lang') == ''):?>
-              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
-            <?php endif ?>
-            <?php if($this->session->userdata('site_lang') == 'indo'):?>
-              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
-            <?php endif ?>
-            <?php if($this->session->userdata('site_lang') == 'chinese'):?>
-              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
-            <?php endif ?>
-          </div>
-          <ul>
-            <li id="english">
-              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
-            </li>
-            <li id="indo">
-              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
-            </li>
-            <li id="chinese">
-              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
-            </li>
-          </ul>
-        </div>
-        <script type="text/javascript">
-          $(document).ready(function(){
-            $('.language li').on("click", function(){
-              var id = $(this).attr('id');
-              var image = $(this).attr('src');
-              console.log(id);
-              javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/'+id;
-              $('.language-switcher .language-selector').val(id).click();
-            });
-            $('.language .selected').on("click", function(){
-              $(this).siblings().toggleClass('open');
-            });
-          });
-        </script>
-      </div>
-    </div>
     <div class="middle">
       <div class="container">
         <div class="logo">
@@ -87,6 +42,47 @@
             </div>
           </div>
        </div>
+        <div class="language">
+          <div class="selected">
+            <?php if($this->session->userdata('site_lang') == 'english'):?>
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
+            <?php endif ?>
+            <?php if($this->session->userdata('site_lang') == ''):?>
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
+            <?php endif ?>
+            <?php if($this->session->userdata('site_lang') == 'indo'):?>
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
+            <?php endif ?>
+            <?php if($this->session->userdata('site_lang') == 'chinese'):?>
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
+            <?php endif ?>
+          </div>
+          <ul>
+            <li id="english">
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
+            </li>
+            <li id="indo">
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
+            </li>
+            <li id="chinese">
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
+            </li>
+          </ul>
+        </div>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('.language li').on("click", function(){
+              var id = $(this).attr('id');
+              var image = $(this).attr('src');
+              console.log(id);
+              javascript:window.location.href='<?php echo base_url(); ?>LanguageSwitcher/switchLang/'+id;
+              $('.language-switcher .language-selector').val(id).click();
+            });
+            $('.language .selected').on("click", function(){
+              $(this).siblings().toggleClass('open');
+            });
+          });
+        </script>
       </div>
     </div>
 </div>
