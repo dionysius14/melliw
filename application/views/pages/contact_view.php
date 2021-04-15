@@ -3,8 +3,74 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="contact-us">
-        <div class="container">
-            <div class="content form">
+        <div id="map"></div>
+        <div class="content location">
+            <div class="container">
+                <div class="col-md-3 col-xs-6 boxes headoffice">
+                    <div class="box">
+                        <i class="icon-map-marker"></i>
+                        <div class="detail">
+                            <span>Our Location</span>
+                            <p><?php echo $profile->headoffice; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 boxes">
+                    <div class="box hours">
+                        <i class="icon-time"></i>
+                        <div class="detail">
+                            <span>Business Hours</span>
+                            <p><?php echo $profile->working_time; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 boxes">
+                    <div class="box email">
+                        <i class="icon-envelope"></i>
+                        <div class="detail">
+                            <span>Email Us</span>
+                            <p><?php echo $profile->email; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 boxes">
+                    <div class="box call">
+                        <i class="icon-phone"></i>
+                        <div class="detail">
+                            <span>Call Us</span>
+                            <p><?php echo $profile->phone; ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content ecommerce">
+            <div class="container">
+                <div class="col-md-3 col-xs-6 alibaba">
+                    <a href="">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\alibaba.png">
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-6 amazon">
+                    <a href="">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\amazon.png">
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-6 shopee">
+                    <a href="">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\shopee.png">
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-6 tokped">
+                    <a href="">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\tokped.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- tidak ada di requirement -->
+       <!--  <div class="content form">
+            <div class="container">
                 <div class="page-header">
                     <h1>Leave a Message</h1>
                 </div>
@@ -26,42 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="submit" id="button" name="kirim" value="Send"  class="btn btn-success" />
                 <?php echo form_close(); ?> 
             </div>
-
-            <div class="content location">
-                <div class="page-header">
-                    <h1>Get in Touch</h1>
-                </div>
-                <div class="boxes headoffice">
-                    <div class="box">
-                        <i class="icon-map-marker"></i>
-                        <span>Our Location</span>
-                        <p><?php echo $profile->headoffice; ?></p>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box hours">
-                        <i class="icon-time"></i>
-                        <span>Business Hours</span>
-                        <p><?php echo $profile->working_time; ?></p>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box email">
-                        <i class="icon-envelope"></i>
-                        <span>Email Us</span>
-                        <p><?php echo $profile->email; ?></p>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="box call">
-                        <i class="icon-phone"></i>
-                        <span>Call Us</span>
-                        <p><?php echo $profile->phone; ?></p>
-                    </div>
-                </div>
-            </div>
-            <div id="map"></div>
-        </div> 
+        </div> -->
     </div>
 </div>
 <script type="text/javascript">
