@@ -45,11 +45,17 @@
 					Jalan Kaliurang <br>
 					Pakem, Sleman, Yogyakarta <br>
 					55582 <br>
-
-				  <?php echo "+". $profile->phone; ?><br>
-				  <br>
-				  <a href="mailto:<?php echo $profile->email; ?>"><?php echo $profile->email; ?></a><br><br>
+				  	<?php echo "+". $profile->phone; ?><br>
+				  	<a href="mailto:<?php echo $profile->email; ?>"><?php echo $profile->email; ?></a>
 				</p>
+				<div class="whatsapp">
+					<img src="<?php echo base_url(); ?>\assets\css\public\default\img\wa-green.png">
+					<span>
+						<a class="link" target="blank" href="<?php echo $profile->link_wa; ?>" >
+						+<?php echo $profile->phone; ?>
+						</a>
+					</span>
+				</div>
 				<div class="social-icon">
 		          <ul>
 		            <li>
