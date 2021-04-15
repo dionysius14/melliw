@@ -32,9 +32,6 @@ h1, h2, h3, h4{
     margin-top: 10px;
     border: 0px;
 }
-.header{
-    margin-bottom: 20px;
-}
 .header .upper{
     background: #8dd842;
     padding: 10px 85px;
@@ -653,53 +650,185 @@ h2{
 .menu h1{
     margin-top: 0px;
 }
-.back-home.animsition .side{
-    float: left;
-    padding: 15px;
-    width: 50%;    
-    margin-bottom: 20px;
-}
-.back-home.animsition .side p{
-    text-align: justify;
-}
-.back-home.animsition .side .image{
-    height: 200px;
+
+.about-us .profile{
+    background: #2D6420;
     width: 100%;
-    background-size: cover;
-    background-position: center center;
-    display: block;    
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 40px;
 }
-.back-home.animsition .side .points{
-    margin-top: 20px;
-}
-.back-home.animsition .side .points i{
-    float: left;
-    width: 67px;
-    max-width: 67px;    
-    color: rgb(141, 216, 66);
-}
-.back-home.animsition .side .points i:before{
-    font-size: 35px;
-}
-.back-home.animsition .side .points h2{
-    float: left;
-    width: 85%;    
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 0px;
-    line-height: 35px;
-    margin-bottom: 0px;
-}
-.back-home.animsition .side .points p{
-    width: 100%;
-    text-align: justify;
-    clear: left;
+.about-us .profile:after {
     display: block;
-    padding-top: 10px;
-    padding-left: 67px;
+    content: '';
+    width: 100%;
+    height: 100px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
 }
+.about-us .profile > .container .main-banner img{
+    width: 100%;
+}
+.about-us .profile .story{
+    display: flex;
+    color: #FFEEBE;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+.about-us .profile .story >h1{
+    color: #FFEEBE;
+    width: 30%;
+    text-align: left;
+}
+.about-us .profile .story .content{
+    width: 70%;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.about-us .visi-misi{
+    margin-bottom: 40px;
+}
+.about-us h1,
+.about-us h3{
+    color: #3a7f0d;
+}
+.about-us h3{
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.about-us .visi-misi p{
+    font-size: 18px;
+    text-align: justify;
+}
+.about-us .visi-misi .container{
+    max-width: 768px;
+}
+.about-us .visi-misi .container .misi{
+    margin-top: 40px;
+}
+
+
+
+.about-us .about-value{
+    background: #16293A;
+    padding: 64px 0 80px;
+}
+.about-us .about-value h2 {
+    color: #FFFEFA;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+.about-us .about-value span{
+    color: #80B643;
+    font-size: 32px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.about-us .about-value h3{
+    color: #FFEEBE;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.about-us .about-value p{
+    color: #FFFBEF;
+    font-size: 16px;
+    text-align: justify;
+    font-weight:500;
+}
+
+.about-us .stucture{
+    padding-top: 60px;
+}
+.about-us .stucture .container > h1{
+    margin-bottom: 20px;
+}
+.about-us .stucture .container > p{
+    text-align: center;
+    font-size: 18px;
+}
+.about-us .stucture .container .board{
+    margin-top: 40px;
+    color: #80B643;
+    border-color: #80B643;
+    padding-top: 32px;
+    border-top: 4px solid;
+    margin-bottom: 48px;
+    overflow: hidden;
+    position: relative;
+}
+.about-us .stucture .container .board .image{
+    position: relative;
+}
+.about-us .stucture .container .board .image:after{
+    display: block;
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background: #e1fbcc;
+    z-index: -1;
+    bottom: 0;
+}
+.about-us .stucture .container .board .item{
+    text-align: center;
+    margin-top: 30px;
+    padding: 0px;
+}
+.about-us .stucture .container .board .item > *{
+    padding: 0px 10px;
+}
+.about-us .stucture .container .board .item .name{
+    font-size: 22px;
+    color: #0d2a0d;
+}
+.about-us .stucture .container .board .item{
+    font-size: 18px;
+}
+
+
+
+.about-us .certificate{
+    background: #f5ffea;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+.about-us .certificate .text{
+    display: flex;
+    padding-bottom: 40px;
+}
+.about-us .certificate .text h1{
+    text-align: left;
+    width: 30%;
+    font-size: 25px;
+}
+.about-us .certificate .text p{
+    width: 70%;
+    font-size: 18px;
+    color: #0d2a0d;
+}
+
+.about-us .certificate .certificate-items .item{
+    margin-top: 10px;
+}
+.about-us .certificate .certificate-items .item img{
+    width: 100%;
+}
+
+
+
+
 
 .back-home.animsition .profile.container > img{
     width: 100%;
@@ -1317,6 +1446,42 @@ h2{
         width: 40%;
         margin-top: -34px;
     }
+
+    .about-us .profile > .container .main-banner{
+        height: 360px;
+        position: relative;
+        overflow: hidden;
+    }
+    .about-us .profile > .container .main-banner img{
+        width: initial;
+        max-width: initial;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .about-us .stucture .container .board .image img{
+        width: 100%;
+    }
+
+    .about-us .profile .story,
+    .about-us .certificate .text{
+        display: block;
+        padding-bottom: 0px;
+    }
+    .about-us .profile .story > h1,
+    .about-us .profile .story >.content,
+    .about-us .certificate .text h1,
+    .about-us .certificate .text p{
+        width: 100%;
+    }
+    .about-us .profile .story > h1,
+    .about-us .certificate .text h1{
+        margin-bottom: 20px;
+    }
+
 }
 
 @media only screen and (max-width: 639px) {
@@ -1420,6 +1585,9 @@ h2{
     }
     .header .upper .container {
         padding: 0px;
+    }
+    .about-us .certificate .certificate-items .item{
+        width: 100%;
     }
 }
 @media only screen and (max-width: 380px) {
