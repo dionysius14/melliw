@@ -287,6 +287,7 @@ h1, h2, h3, h4{
     text-align: justify;
     font-size: 16px;
     line-height: 26px;
+    margin-bottom: 0px;
     color: #fffbef;
 }
 .footer-container .footer .container > .row h3{    
@@ -303,6 +304,18 @@ h1, h2, h3, h4{
 
 .footer-container .footer .container > .row.about{    
     margin-top: 86px;
+}
+.footer-container .footer .container > .row.about .whatsapp{    
+    position: relative;
+    padding: 13px 0px;
+    padding-left: 42px;
+    margin-bottom: 20px;
+}
+.footer-container .footer .container > .row.about .whatsapp img{    
+    position: absolute;
+    top: -39px;
+    left: -49px;
+    width: 125px;
 }
 
 .footer-container .footer .container > .row .logo{    
