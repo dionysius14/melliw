@@ -20,6 +20,9 @@
               </div>
             </div>
             <ul class="nav navbar-nav navbar-center" align="center">
+                <li class="list-menu about">
+                  <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>"><?php echo $this->lang->line('menu_profile'); ?></a>
+                </li>
                <li class="list-menu category">
                   <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>"><?php echo $this->lang->line('menu_product'); ?></a>
                </li>
@@ -32,9 +35,6 @@
                <li class="list-menu category">
                   <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("faq"); ?>"><?php echo $this->lang->line('menu_faq'); ?></a>
                </li>
-                <li class="list-menu about">
-                  <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>"><?php echo $this->lang->line('menu_profile'); ?></a>
-                </li>
                  <li class="list-menu category">
                     <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>"><?php echo $this->lang->line('menu_contact'); ?></a>
                  </li>
