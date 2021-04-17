@@ -5,61 +5,72 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="ourproduct">
 	<div class="ourproduct-container">
 	    <div class="container">
-	    	<h1><?php echo $nama_kategori; ?></h1>
-	    	<div class="sidebar-category">
-	    		<div class="mobile-action"></div>
-	    		<ul>
-	                <?php foreach($kategori as $kt){?>
-						<?php if ($kt->kategori_nama == $nama_kategori ): ?>
-							<li class="current">
-						<?php else: ?>
-							<li>
-						<?php endif ?>
-							<a href="<?php echo site_url("ourproduct/setkategori?id=".$kt->kategori_id.""); ?>">
-								<?php echo $kt->kategori_nama; ?>	
-							</a>
-						</li>
-	                <?php } ?>
-	    		</ul>
-	    	</div>
-	    	<div class="main">
-				<ul class="items">
-					<?php if(count($produk)>0){?>
-						<?php foreach($produk as $dtl){?>
-							<li class="item">
-								<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
-									<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
+			<div class="main-banner">
+				<img src="http://localhost/melliw/assets/uploads/banner_profile.jpg">
+			</div>
+			<div class="main-content">
+				<div class="sidebar-category">
+		    		<div class="mobile-action"></div>
+		    		<ul>
+		                <?php foreach($kategori as $kt){?>
+							<?php if ($kt->kategori_nama == $nama_kategori ): ?>
+								<li class="current">
+							<?php else: ?>
+								<li>
+							<?php endif ?>
+								<a href="<?php echo site_url("ourproduct/setkategori?id=".$kt->kategori_id.""); ?>">
+									<?php echo $kt->kategori_nama; ?>	
 								</a>
-									<div class="text">
+							</li>
+		                <?php } ?>
+		    		</ul>
+		    	</div>
+		    	<div class="main">
+		    		<h1><?php echo $nama_kategori; ?></h1>
+					<ul class="items">
+						<?php if(count($produk)>0){?>
+							<?php foreach($produk as $dtl){?>
+								<li class="item">
+									<?php if ($dtl->sertifikat): ?>
+										<div class="sertificate"><?php echo $dtl->sertifikat; ?></div>
+									<?php endif ?>
+									<div class="product-container">
 										<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+											<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
+										</a>
+										<div class="text">
+<!-- 											<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+												<div class="prod-name">
+													<h4><?php echo $dtl->nama; ?></h4>
+												</div>
+											</a> -->
 											<div class="prod-name">
 												<h4><?php echo $dtl->nama; ?></h4>
 											</div>
-										</a>
-										<div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div>
-										<div class="sertificate"><p>Product Sertificate : <?php echo $dtl->sertifikat; ?></p></div>
-										<div class="prod-price">
-										<?php if($dtl->harga_jual > 0 ){ ?>
-											<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></del></span>
-											<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') .'/'.$dtl->satuan. '</b>'?></span>
-										<?php }else{ ?>
-											<span class="old"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></span>
-										<?php } ?>
+											<div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div>
+											<div class="prod-price">
+											<?php if($dtl->harga_jual > 0 ){ ?>
+												<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></del></span>
+												<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') .'/'.$dtl->satuan. '</b>'?></span>
+											<?php }else{ ?>
+												<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></span>
+											<?php } ?>
+											</div>
 										</div>
 									</div>
-								</a>
-							</li>
-						<?php } }else{  ?>
+								</li>
+							<?php } }else{  ?>
 							<span><center>----- Produk tidak Ditemukan -----</center></span>
 						<?php }  ?>
-				</ul>
+					</ul>
 
-				<div class="toolbar">
-					<div class="pages"> 
-	        			<?php echo $this->pagination->create_links(); ?>
-					</div>
+					<div class="toolbar">
+						<div class="pages"> 
+		        			<?php echo $this->pagination->create_links(); ?>
+						</div>
+			    	</div>
 		    	</div>
-	    	</div>
+			</div>
 	    </div>
 	</div>
 </div>

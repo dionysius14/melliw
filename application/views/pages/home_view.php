@@ -65,17 +65,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<?php foreach($latest as $dtl){?>
 				<div class="gkImage">
-					<div class="sertificate"><?php echo $dtl->sertifikat; ?></div>
+					<?php if ($dtl->sertifikat): ?>
+						<div class="sertificate"><?php echo $dtl->sertifikat; ?></div>
+					<?php endif ?>
 					<div class="product-container">
 						<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
 							<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
 						</a>
 						<div class="text">
-							<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+	<!-- 					<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
 								<div class="prod-name">
 									<h4><?php echo $dtl->nama; ?></h4>
 								</div>
-							</a>
+							</a> -->
+							<div class="prod-name">
+								<h4><?php echo $dtl->nama; ?></h4>
+							</div>
 							<div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div>
 							<div class="prod-price">
 							<?php if($dtl->harga_jual > 0 ){ ?>
