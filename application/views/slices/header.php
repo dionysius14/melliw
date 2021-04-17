@@ -113,7 +113,7 @@
       $('.navbar-nav .list-menu > a').each(function () {
           var linkPage = this.href;
 
-          if (activePage == linkPage) {
+          if (url.includes(linkPage)) {
               $(this).closest("li").addClass("active");
           }
       });

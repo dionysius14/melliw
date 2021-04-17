@@ -31,8 +31,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<?php if(count($produk)>0){?>
 							<?php foreach($produk as $dtl){?>
 								<li class="item">
-
-									<div class="sertificate"><?php echo $dtl->sertifikat; ?></div>
+									<?php if ($dtl->sertifikat): ?>
+										<div class="sertificate"><?php echo $dtl->sertifikat; ?></div>
+									<?php endif ?>
 									<div class="product-container">
 										<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
 											<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">

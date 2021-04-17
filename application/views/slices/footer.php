@@ -25,16 +25,16 @@
 				<div>
 					<ul>
 						<li>
-							<a href="">Contact Us</a>
+							<a href="<?php echo site_url("contact"); ?>">Contact Us</a>
 						</li>
 						<li>
-							<a href="">Faq</a>
+							<a href="<?php echo site_url("faq"); ?>">Faq</a>
 						</li>
 						<li>
-							<a href="">How To Order</a>
+							<a href="<?php echo site_url("howto"); ?>">How To Order</a>
 						</li>
 						<li>
-							<a href="">News</a>
+							<a href="<?php echo site_url("news"); ?>">News</a>
 						</li>
 					</ul>
 				</div>
