@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 				<?php } ?>
-				<a href="<?php echo site_url("ourproduct"); ?>">Show All</a>
+				<a href="<?php echo site_url("ourproduct"); ?>">More</a>
 			</div>
 		</div>
 

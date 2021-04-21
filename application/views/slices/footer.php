@@ -90,3 +90,7 @@
     </div>
     <div class="copyright">Melliw 2021 All Right Reserved</div>
 </div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=082111112222&text=Hello" class="wa-icon-float" target="_blank">
+<i class="fa fa-whatsapp wa-float"></i>
+</a>

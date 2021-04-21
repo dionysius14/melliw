@@ -20,6 +20,9 @@
               </div>
             </div>
             <ul class="nav navbar-nav navbar-center" align="center">
+                <li class="list-menu category">
+                  <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo base_url(); ?>"><?php echo $this->lang->line('menu_home'); ?></a>
+                </li>
                 <li class="list-menu about">
                   <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>"><?php echo $this->lang->line('menu_profile'); ?></a>
                 </li>

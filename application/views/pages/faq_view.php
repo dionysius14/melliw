@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="faq">
 	<div class="main-banner">
-		<img src="http://localhost/melliw/\assets\css\public\default\img\forest.jpg">
+		<img src="http://localhost/melliw/\assets\css\public\default\img\forest.jpeg">
 		<h1>Frequently Asked Question</h1>
 	</div>
 	<div class="container">
