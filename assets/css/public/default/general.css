@@ -211,6 +211,9 @@ h1, h2, h3, h4{
     transition: all 0.6s ease-in-out 0s;
     font-family: 'Raleway', sans-serif;
 }
+body.menu .header .header-menu .navbar-nav li:first-child a{
+    color: #0D2A0D;
+}
 .header .header-menu .navbar-nav li.active a{
     color: #8dd842;
 }
