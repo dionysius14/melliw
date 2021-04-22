@@ -445,11 +445,11 @@ h2{
     overflow: hidden;
 }
 .homepage .why ul li .content .image img{
-    width: 60%;
-    margin-top: 0px;
+    width: 100%;
+    margin-top: -45px;
 }
 .homepage .why ul li .icon{
-    background-color: rgb(141, 216, 66);
+    background-color: transparent;
     width: 63px;
     height: 63px;
     position: relative;
@@ -482,9 +482,26 @@ h2{
 }
 .homepage .why ul li:hover .content .icon{
     top: -10%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     transition: 0.2s ease all;
+}
+.homepage .why ul li h2{
+    letter-spacing: 0.5px;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Roboto', arial, sans-serif;
+}
+.homepage .why ul li .smue-service-box-content-section{
+    position: relative;
+    top: -200%;
+}
+.homepage .why ul li:hover .smue-service-box-content-section{
+    top: unset;
+}
+.homepage .why ul li p{
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 18px;
 }
 
 .homepage .why ul li .icon{
@@ -492,7 +509,7 @@ h2{
 }
 .homepage .why ul li .icon img{
     width: 100%;    
-    padding: 10px;
+    padding: 0px;
     transition: 0.4s;
 }
 .homepage .why ul li .icon .fa{
@@ -598,33 +615,44 @@ h2{
     border: 1px solid #16293a;
     padding: 20px;
     position: relative;
-    min-height: 412px;
+    min-height: 350px;
 }
-.homepage .products .container .gkImage .product-container > a{
+/*.homepage .products .container .gkImage .product-container > a{
     position: relative;
     display: block;
     width: 100%;
     height: 370px;
+}*/
+.homepage .products .container .gkImage .product-container > a{
+    display: block;
+    height: 100%;
 }
-.homepage .products .container .gkImage .product-container > a img{
+/*.homepage .products .container .gkImage .product-container > a img{
     width: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+}*/
+.homepage .products .container .gkImage .product-container > a img{
+    position: relative;
+    left: unset;
+    top: unset;
+    transform: none;
+    width: 80%;
 }
-.homepage .products .container .gkImage .product-container  > .text{
+/*.homepage .products .container .gkImage .product-container  > .text{
     display: none;
-}
+}*/
 .homepage .products .container .gkImage .product-container  > .text p{
     margin-bottom: 2px;
 }
 
-.homepage .products .container .gkImage:hover .product-container > a{
+/*.homepage .products .container .gkImage:hover .product-container > a{
     display: none;
     transition: 0.2s ease all;
-}
-.homepage .products .container .gkImage:hover .product-container > .text{
+}*/
+/*.homepage .products .container .gkImage:hover .product-container > .text{
     display: block;
     position: absolute;
     top: 50%;
@@ -633,7 +661,7 @@ h2{
     width: 100%;
     padding: 101px 10px;
     transition: 0.2s ease all;
-}
+}*/
 .homepage .products .container .gkImage:hover .product-container{
     box-shadow: -9px 8px 0px 0px rgb(250 167 34);
     -webkit-box-shadow: -9px 8px 0px 0px rgb(250 167 34);
@@ -662,7 +690,7 @@ h2{
 
 .homepage .products .container .gkImage .text{
     text-align: center;    
-    min-height: 120px;
+/*    min-height: 120px;*/
 }
 .homepage .products .container .gkImage .text h4{
     font-weight: 700;
@@ -1219,15 +1247,82 @@ h2{
 }
 .contact-us .content.location{
     padding: 20px;
-    background: #16293a;
+    background: #b6db8b;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     z-index: 2;
     position: relative;
+}
+.contact-us .content.location ul{
+    list-style: none;
+}
+.contact-us .content.location > .container{
+    display: flex;
+}
+.contact-us .content.location > .container h1 {
+    text-align: left;
+}
+.contact-us .content.location > .container .headoffice{
+    width: 320px;
+    font-size: 18px;
+}
+.contact-us .content.location > .container .headoffice > ul li{
+    margin-bottom: 10px;
+}
+.contact-us .content.location > .container .headoffice > ul li:first-child p{
+    margin-bottom: 0px;
+}
+.contact-us .content.location > .container .headoffice p.contact-text{
+    display: flex;
+}
+.contact-us .content.location > .container .headoffice span,
+.contact-us .content.location > .container .headoffice a{
+    display: block;
+    margin-left: 10px;
+}
+.contact-us .content.location > .container .headoffice span.title{
+    width: 90px;
+    margin-left: 0px;
+    display: block;
+    position: relative;
+}
+.contact-us .content.location > .container .headoffice span.title:after{
+    content: ':';
+    position: absolute;
+    right: 0;
+}
+.contact-us .content.location > .container .headoffice h2{
+    margin-top: 25px;
+}
+.contact-us .content.location > .container .content.form{
+    width: calc(100% - 320px);
+}
+
+
+.contact-us .content.ecommerce h1{
     margin-bottom: 40px;
 }
+.contact-us .content.social{
+    background: #16293A;
+}
+.contact-us .content.social .container{
+    overflow: hidden;
+    padding: 40px;
+}
+.contact-us .content.social h1{
+    color: white;
+    padding-top: 40px;
+}
+.contact-us .content.social .container > div{
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+
+
 .contact-us .content form ul{
     list-style: none;
 }
@@ -1248,69 +1343,28 @@ h2{
     min-height: 120px;
 }
 .contact-us .content #button{
-    margin-top: 5px;
-    color: #fff;
-    background: #8DD842;
-    border-color: #8dd842;
-    text-transform: uppercase;
-    font-size: 16px;
-    max-width: 165px;
-    width: 100%;
-    border-radius: 0px;
-}
-.contact-us .content #button:hover{
-    background: black;
-    border-color: black;
-}
-
-.contact-us .content .box{
-    height: 200px;
-    padding: 10px;
-    padding-top: 15px;
-    background: white;
-    position: relative;
-    border-radius: 0px;
-    overflow: hidden;
-    text-align: center;
-    font-size: 15px;
+    background: rgb(250,167,34);
+    color: black;
     font-weight: 700;
-}
-.contact-us .content .box i{
     display: block;
-    font-size: 3em;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    clear: both;
+    max-width: 200px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 9;
+    border: 1px solid rgb(250,167,34);
+    border-radius: 0;
 }
-.contact-us .content .box .detail{
-    position: absolute;
-    bottom: -100px;
-}
-.contact-us .content .box p{
-    margin-bottom: 0px;
-}
-.contact-us .content .boxes:hover .box{
+.contact-us .content #button:hover {
     box-shadow: -9px 8px 0px 0px rgb(128 182 67);
     -webkit-box-shadow: -9px 8px 0px 0px rgb(128 182 67);
     -moz-box-shadow: -9px 8px 0px 0px rgba(250,167,34,0.75);
     transition: 0.2s ease all;
+    text-decoration: none;
     background: transparent;
-    border: 1px solid rgb(128 182 67);
-    color: white;
-    padding-top: 100px;
-}
-.contact-us .content .boxes:hover .detail{
-    position: relative;
-    bottom: unset;
-    transition: 0.2s ease all;
-}
-.contact-us .content .boxes:hover i{
-    transform: translateX(-50%);
-    top: 22px;
-    transition: 0.2s ease all;
-    color: rgb(128 182 67);
+    color: #80b643;
+    border: 1px solid #80b643;
 }
 .contact-us #map{
     width: 100%;
@@ -1581,9 +1635,9 @@ h2{
     .homepage .products .container .gkImage .product-container{
        min-height: 320px;
     }
-    .homepage .products .container .gkImage .product-container > a{
+/*    .homepage .products .container .gkImage .product-container > a{
         height: 278px;
-    }
+    }*/
 }
 @media only screen and (max-width: 1190px) {
     .header .middle .container div{
@@ -1853,6 +1907,19 @@ h2{
     .homepage .testimonial .container .gkImage:nth-child(3n+1){
         clear: left;
     }
+    .contact-us .content.location > .container{
+        display: block;
+    }
+    .contact-us .content.location > .container .headoffice,
+    .contact-us .content.location > .container .content.form{
+        width: 100%;
+    }
+    .contact-us .content.location > .container .content.form{
+        margin-top: 40px;
+    }
+    .contact-us .content.location > .container .content.form .container{
+        padding: 0px;
+    }
     .contact-us .content {
         width: 100%;
     }
@@ -1860,8 +1927,12 @@ h2{
         width: 100%;
     }
     .homepage .why ul li .content .image img{
-        width: 40%;
+        width: 50%;
         margin-top: -34px;
+    }
+
+    .homepage .why ul li:hover .content{
+        padding-top: 44px;
     }
 
     .about-us .profile > .container .main-banner{

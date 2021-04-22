@@ -65,9 +65,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<?php foreach($latest as $dtl){?>
 				<div class="gkImage">
-					<?php if ($dtl->sertifikat): ?>
+<!-- 					<?php if ($dtl->sertifikat): ?>
 						<div class="sertificate"><?php echo $dtl->sertifikat; ?></div>
-					<?php endif ?>
+					<?php endif ?> -->
 					<div class="product-container">
 						<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
 							<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="prod-name">
 								<h4><?php echo $dtl->nama; ?></h4>
 							</div>
-							<div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div>
+							<!-- <div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div> -->
 							<div class="prod-price">
 							<?php if($dtl->harga_jual > 0 ){ ?>
 								<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></del></span>
@@ -111,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li>
 							<div class="content">
 								<div class="icon">
-									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\leaf.png">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_icon.svg">
 								</div>
 								<div class="image">
 									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
@@ -125,7 +125,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li>
 							<div class="content">
 								<div class="icon">
-										<i class="fa fa-users"></i>
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\fpp_icon.svg">
 								</div>
 								<div class="image">
 									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
@@ -139,7 +139,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li>
 							<div class="content">
 								<div class="icon">
-										<i class="fa fa-users"></i>
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\enviro_icon.svg">
 								</div>
 								<div class="image">
 									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
@@ -153,7 +153,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li>
 							<div class="content">
 								<div class="icon">
-										<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\so-logo.png">
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_icon.svg">
 								</div>
 								<div class="image">
 									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
@@ -167,7 +167,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li>
 							<div class="content">
 								<div class="icon">
-										<i class="fa fa-truck"></i>
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\fpp_icon.svg">
 								</div>
 								<div class="image">
 									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
@@ -181,7 +181,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li>
 							<div class="content">
 								<div class="icon">
-										<i class="fa fa-truck"></i>
+									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\enviro_icon.svg">
 								</div>
 								<div class="image">
 									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\aha_photo.jpg">
