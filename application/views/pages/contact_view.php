@@ -3,48 +3,60 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="contact-us">
-        <div id="map"></div>
         <div class="content location">
             <div class="container">
-                <div class="col-md-3 col-xs-6 boxes headoffice">
-                    <div class="box">
-                        <i class="icon-map-marker"></i>
-                        <div class="detail">
-                            <span>Our Location</span>
-                            <p><?php echo $profile->headoffice; ?></p>
+                <div class="headoffice">
+                    <h1>Our Office</h1>
+                    <h2>Headquarter & Factory Complex</h2>
+                    <ul>
+                        <li>
+                            <p>
+                                PT. Melliw
+                            </p>
+                            <p>
+                                <?php echo $profile->headoffice; ?>
+                            </p>
+                            <p>
+                                Indonesia
+                            </p>
+                        </li>
+                        <li><p class="contact-text"><span class="title">Phone</span><span><?php echo $profile->phone; ?></span></p></li>
+                        <li><p class="contact-text"><span class="title">Whatsapp</span><a class="link" target="blank" href="<?php echo $profile->link_wa; ?>" >
+                        +<?php echo $profile->phone; ?>
+                        </a></p></li>
+                        <li><p class="contact-text"><span class="title">Email</span><span><?php echo $profile->email; ?></span></p></li>
+                    </ul>
+                </div>     
+
+                <!-- tidak ada di requirement -->
+                <div class="content form">
+                    <div class="container">
+                        <div class="page-header">
+                            <h1>Leave a Message</h1>
                         </div>
+                        <?php echo form_open('contact/insertcontact', 'id="form_add"'); ?> 
+                        <ul>
+                            <li>
+                                <input type="text" id="kontak_nama" name="kontak_nama" placeholder="Name" required>
+                            </li>
+                            <li>
+                                <input type="email" id="kontak_email" name="kontak_email" placeholder="Email" required>
+                            </li>
+                            <li>
+                                <input type="text" id="kontak_phone" name="kontak_phone" placeholder="Phone" required>
+                            </li>
+                            <li>
+                                <textarea rows="4" cols="50" id="kontak_keterangan" placeholder="Message" name="kontak_keterangan" required style="vertical-align: top;"></textarea>
+                            </li>
+                        </ul>
+                        <input type="submit" id="button" name="kirim" value="Send"  class="btn btn-success" />
+                        <?php echo form_close(); ?> 
                     </div>
-                </div>
-                <div class="col-md-3 col-xs-6 boxes">
-                    <div class="box hours">
-                        <i class="icon-time"></i>
-                        <div class="detail">
-                            <span>Business Hours</span>
-                            <p><?php echo $profile->working_time; ?></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-6 boxes">
-                    <div class="box email">
-                        <i class="icon-envelope"></i>
-                        <div class="detail">
-                            <span>Email Us</span>
-                            <p><?php echo $profile->email; ?></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-6 boxes">
-                    <div class="box call">
-                        <i class="icon-phone"></i>
-                        <div class="detail">
-                            <span>Call Us</span>
-                            <p><?php echo $profile->phone; ?></p>
-                        </div>
-                    </div>
-                </div>
+                </div> 
             </div>
         </div>
         <div class="content ecommerce">
+            <h1>Our Store</h1>
             <div class="container">
                 <div class="col-md-3 col-xs-6 alibaba">
                     <a href="">
@@ -68,31 +80,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </div>
-        <!-- tidak ada di requirement -->
-       <!--  <div class="content form">
+        <div class="content social">
+            <h1>Our Media</h1>
             <div class="container">
-                <div class="page-header">
-                    <h1>Leave a Message</h1>
+                <div class="linkedin">
+                    <a href="https://id.linkedin.com/">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\linkedin_icon.svg">
+                    </a>
                 </div>
-                <?php echo form_open('contact/insertcontact', 'id="form_add"'); ?> 
-                <ul>
-                    <li>
-                        <input type="text" id="kontak_nama" name="kontak_nama" placeholder="Name" required>
-                    </li>
-                    <li>
-                        <input type="email" id="kontak_email" name="kontak_email" placeholder="Email" required>
-                    </li>
-                    <li>
-                        <input type="text" id="kontak_phone" name="kontak_phone" placeholder="Phone" required>
-                    </li>
-                    <li>
-                        <textarea rows="4" cols="50" id="kontak_keterangan" placeholder="Message" name="kontak_keterangan" required style="vertical-align: top;"></textarea>
-                    </li>
-                </ul>
-                <input type="submit" id="button" name="kirim" value="Send"  class="btn btn-success" />
-                <?php echo form_close(); ?> 
+                <div class="instagram">
+                        <a href="https://www.instagram.com/">
+                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\instagram_icon.svg">
+                        </a>
+                </div>
+                <div class="facebook">
+                        <a href="https://www.facebook.com/">
+                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\facebook_icon.svg">
+                        </a>
+                </div>
+                <div class="twitter">
+                        <a href="https://twitter.com/">
+                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\twitter_icon.svg">
+                        </a>
+                </div>
+                <div class="youtube">
+                        <a href="https://www.youtube.com/">
+                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\youtube_icon.svg">
+                        </a>
+                </div>
             </div>
-        </div> -->
+        </div>
+
+        <div id="map"></div>
     </div>
 </div>
 <script type="text/javascript">
