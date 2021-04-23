@@ -2,8 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<div class="ourproduct">
-	<div class="ourproduct-container">
+<div class="product-detail">
+	<div class="product-detail-container">
 	    <div class="container">
 	    	<h1>Our Products</h1>
 	    	<div class="sidebar-category">

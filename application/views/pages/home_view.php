@@ -71,26 +71,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="product-container">
 						<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
 							<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
-						</a>
-						<div class="text">
-	<!-- 					<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+							<div class="text">
+		<!-- 					<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+									<div class="prod-name">
+										<h4><?php echo $dtl->nama; ?></h4>
+									</div>
+								</a> -->
 								<div class="prod-name">
 									<h4><?php echo $dtl->nama; ?></h4>
 								</div>
-							</a> -->
-							<div class="prod-name">
-								<h4><?php echo $dtl->nama; ?></h4>
+								<!-- <div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div> -->
+								<div class="prod-price">
+								<?php if($dtl->harga_jual > 0 ){ ?>
+									<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></del></span>
+									<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') .'/'.$dtl->satuan. '</b>'?></span>
+								<?php }else{ ?>
+									<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></span>
+								<?php } ?>
+								</div>
 							</div>
-							<!-- <div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div> -->
-							<div class="prod-price">
-							<?php if($dtl->harga_jual > 0 ){ ?>
-								<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></del></span>
-								<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') .'/'.$dtl->satuan. '</b>'?></span>
-							<?php }else{ ?>
-								<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></span>
-							<?php } ?>
-							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 				<?php } ?>
