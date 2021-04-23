@@ -2,31 +2,34 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<div class="ourproduct">
-    <div class="container">
-		<div class="back">
-			<span><a href="<?php echo site_url("ourproduct"); ?>">Back to store</a></span>
-		</div>
-	</div>
-	<div class="ourproduct-container">
+<div class="product-detail">
+	<div class="product-detail-container">
+		<h1 align="mobile product-name" ><?php echo $detail->nama; ?></h1>
 	    <div class="container">
 	    	<div class="main">
-			<div class="detailproduct container">
-				<div class="side detail">
-					<h1 align="left" ><?php echo $detail->nama; ?></h1>
-					<div class="sertificate"><p>Product Sertificate : lorem ipsum</p></div>
-					<?php if($detail->harga_jual > 0 ){ ?>
-						<span class="price old"><del><?php echo '<b>Rp ' . number_format($detail->harga, 0, ',', '.') .'/'.$detail->satuan. '</b>' ?></del></span>
-						<span class="price final"><?php echo '<b>Rp ' . number_format($detail->harga_jual, 0, ',', '.') .'/'.$detail->satuan. '</b>'?></span>
-					<?php }else{ ?>
-						<span class="price final"><?php echo '<b>Rp ' . number_format($detail->harga, 0, ',', '.') .'/'.$detail->satuan. '</b>' ?></span>
-					<?php } ?>
-					<p><?php echo $detail->deskripsi; ?></p>
+				<div class="detailproduct container">
+					<div class="side">
+						<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $detail->banner; ?>">
+					</div>
+					<div class="side detail">
+						<h1 align="left" ><?php echo $detail->nama; ?></h1>
+						<?php if($detail->harga_jual > 0 ){ ?>
+							<span class="price old"><del><?php echo '<b>Rp ' . number_format($detail->harga, 0, ',', '.') .'/'.$detail->satuan. '</b>' ?></del></span>
+							<span class="price final"><?php echo '<b>Rp ' . number_format($detail->harga_jual, 0, ',', '.') .'/'.$detail->satuan. '</b>'?></span>
+						<?php }else{ ?>
+							<span class="price final"><?php echo '<b>Rp ' . number_format($detail->harga, 0, ',', '.') .'/'.$detail->satuan. '</b>' ?></span>
+						<?php } ?>
+						<p><?php echo $detail->deskripsi; ?></p>
+
+						<div class="sertificate">
+							<div class="certificate-items">
+								<div class="item">
+					              	<img src="<?php echo base_url(); ?>\assets\css\public\default\img\certificate_sample.png">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="side">
-					<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $detail->banner; ?>">
-				</div>
-			</div>
 	    	</div>
 	    </div>
 	</div>
