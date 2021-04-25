@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="sertificate">
 							<div class="certificate-items">
 								<div class="item">
-					              	<img src="<?php echo base_url(); ?>\assets\css\public\default\img\certificate_sample.png">
+						<img src="<?php echo base_url(); ?>assets/uploads/catalog/<?php echo $detail->sertifikat; ?>">
 								</div>
 							</div>
 						</div>
