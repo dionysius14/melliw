@@ -345,8 +345,7 @@ body.menu .header .header-menu .navbar-nav li:first-child a{
     margin: 0 10px;
 }
 .homepage-container .slider.second-banner .bx-wrapper .bx-pager.bx-default-pager a:hover, 
-.homepage-container .slider.second-banner .bx-wrapper .bx-pager.bx-default-pager a.active, 
-.homepage-container .slider.second-banner .bx-wrapper .bx-pager.bx-default-pager a:focus{
+.homepage-container .slider.second-banner .bx-wrapper .bx-pager.bx-default-pager a.active{
     background: #e9f3d1;
 }
 
