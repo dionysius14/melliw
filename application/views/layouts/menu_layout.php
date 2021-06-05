@@ -12,7 +12,7 @@ function googleTranslateElementInit() {
     </head>
     <?php $this->load->view('slices/header'); ?>
     <body class="menu">
-        <div class="back-home animsition">
+        <div class="main page">
             <?php echo $content ?>
         </div>
     </body>
