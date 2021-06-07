@@ -4,12 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="ourproduct">
 	<div class="ourproduct-container">
+		<div class="main-banner">
+			<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myproduct\myproductbaner.png">
+		</div>
 	    <div class="container">
-			<div class="main-banner">
-				<img src="http://localhost/melliw/assets/uploads/banner_profile.jpg">
-			</div>
 			<div class="main-content">
 				<div class="sidebar-category">
+		    		<h2><?php echo $nama_kategori; ?></h2>
 		    		<div class="mobile-action"></div>
 		    		<ul>
 		                <?php foreach($kategori as $kt){?>
@@ -26,7 +27,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    		</ul>
 		    	</div>
 		    	<div class="main">
-		    		<h1><?php echo $nama_kategori; ?></h1>
+		    		<div class="toolbar">
+		    			<div class="search-product">
+	                        <button>
+	                            <i class="fas fa-search" style="color:#385624"></i>
+	                        </button>
+		    				<input type="" name="" placeholder="Search">
+		    			</div>
+		    			<div class="sortby">
+			    			<select>
+			    				<option>Sort By</option>
+			    				<option>Name</option>
+			    				<option>Price</option>
+			    			</select>
+		    			</div>
+		    		</div>
 					<ul class="items">
 						<?php if(count($produk)>0){?>
 							<?php foreach($produk as $dtl){?>
@@ -69,6 +84,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    	</div>
 			</div>
 	    </div>
+	    
+		<div class="content store">
+			<h2>Online Store</h2>
+			<ul>
+	            <li>
+	            	<a class="store-detail" href="">
+	            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store1.png" />
+	            		<span>MelliwTani</span>
+	            	</a>
+		        </li>
+	            <li>
+	            	<a class="store-detail" href="">
+	            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store2.png" />
+	            		<span>MelliwTani</span>
+	            	</a>
+		        </li>
+	            <li>
+	            	<a class="store-detail" href="">
+	            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store3.png" />
+	            		<span>MelliwTani</span>
+	            	</a>
+	            </li>
+	            <li>
+	            	<a class="store-detail" href="">
+	            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store4.png" />
+	            		<span>MelliwTani</span>
+	            	</a>
+	            </li>
+	          </ul>
+			</ul>
+		</div>
 	</div>
 </div>
 <script type="text/javascript">
