@@ -32,6 +32,7 @@ class Contact extends CI_Controller {
         $common['kategori'] = $this->home_model->get_kategori();
         $common['branch'] = $this->home_model->get_branch();
         $common['profile'] = $this->home_model->get_profile();
+        $common['faq'] = $this->home_model->get_faq();
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');

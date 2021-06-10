@@ -52,11 +52,11 @@
                         <li class="list-menu category">
                             <a href="<?php echo site_url("contact"); ?>">Customer Care</a>
                             <ul>
-                                <li class="list-menu category">
-                                    <a data-toggle="" data-target=".navbar-collapse" class="page-scroll" href="<?php echo site_url("faq"); ?>"><?php echo $this->lang->line('menu_faq'); ?></a>
+                                <li>
+                                    <a data-toggle="" data-target=".navbar-collapse" class="page-scroll" href=""><?php echo $this->lang->line('menu_faq'); ?></a>
                                 </li>
-                                <li class="list-menu category">
-                                    <a data-toggle="" data-target=".navbar-collapse" class="page-scroll" href="<?php echo site_url("contact"); ?>"><?php echo $this->lang->line('menu_contact'); ?></a>
+                                <li>
+                                    <a data-toggle="" data-target=".navbar-collapse" class="page-scroll" href=""><?php echo $this->lang->line('menu_contact'); ?></a>
                                 </li>
                             </ul>
                         </li>
@@ -87,15 +87,41 @@
                 <?php endif ?>
             </div>
             <ul>
-                <li id="english">
-                    <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
-                </li>
-                <li id="indo">
-                    <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
-                </li>
-                <li id="chinese">
-                    <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
-                </li>
+                <?php if($this->session->userdata('site_lang') == 'english'):?>
+                    <li id="indo">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
+                    </li>
+                    <li id="chinese">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
+                    </li>
+                <?php endif ?>
+                <?php if($this->session->userdata('site_lang') == ''):?>
+                    <li id="english">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
+                    </li>
+                    <li id="indo">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
+                    </li>
+                    <li id="chinese">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
+                    </li>
+                <?php endif ?>
+                <?php if($this->session->userdata('site_lang') == 'indo'):?>
+                    <li id="english">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
+                    </li>
+                    <li id="chinese">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\chn.png">
+                    </li>
+                <?php endif ?>
+                <?php if($this->session->userdata('site_lang') == 'chinese'):?>
+                    <li id="english">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\eng.png">
+                    </li>
+                    <li id="indo">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\idn.png">
+                    </li>
+                <?php endif ?>
             </ul>
         </div>
         <script type="text/javascript">

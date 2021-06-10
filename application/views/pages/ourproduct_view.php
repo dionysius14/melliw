@@ -47,18 +47,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<?php foreach($produk as $dtl){?>
 								<li class="item">
 									<div class="product-container">
-										<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+										<a href="#">
 											<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
 											<div class="text">
-						<!-- 					<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
-													<div class="prod-name">
-														<h4><?php echo $dtl->nama; ?></h4>
-													</div>
-												</a> -->
 												<div class="prod-name">
 													<h4><?php echo $dtl->nama; ?></h4>
 												</div>
-												<!-- <div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div> -->
 												<div class="prod-price">
 												<?php if($dtl->harga_jual > 0 ){ ?>
 													<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></del></span>
@@ -69,6 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</div>
 											</div>
 										</a>
+										<div class="desc"><p><?php echo $dtl->deskripsi; ?></p></div>
 									</div>
 								</li>
 							<?php } }else{  ?>
