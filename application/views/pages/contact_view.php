@@ -2,117 +2,105 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<div class="contact-us">
-        <div class="content location">
-            <div class="container">
-                <div class="headoffice">
-                    <h1>Our Office</h1>
-                    <h2>Headquarter & Factory Complex</h2>
-                    <ul>
-                        <li>
-                            <p>
-                                PT. Melliw
-                            </p>
-                            <p>
-                                <?php echo $profile->headoffice; ?>
-                            </p>
-                            <p>
-                                Indonesia
-                            </p>
-                        </li>
-                        <li><p class="contact-text"><span class="title">Phone</span><span><?php echo $profile->phone; ?></span></p></li>
-                        <li><p class="contact-text"><span class="title">Whatsapp</span><a class="link" target="blank" href="<?php echo $profile->link_wa; ?>" >
-                        +<?php echo $profile->phone; ?>
-                        </a></p></li>
-                        <li><p class="contact-text"><span class="title">Email</span><span><?php echo $profile->email; ?></span></p></li>
-                    </ul>
-                </div>     
-
-                <!-- tidak ada di requirement -->
-                <div class="content form">
-                    <div class="container">
-                        <div class="page-header">
-                            <h1>Leave a Message</h1>
+<div class="contact-faq">
+    <div class="faq">
+        <div class="container">
+            <h1>
+                FAQ
+                <span>Answer to our most frequently asked questions.</span>
+            </h1>
+            
+            <div class="items">
+                <?php foreach($faq as $fq){
+                    $ask = $fq->faq_ask;
+                    $ans = $fq->faq_answer;
+                    if($this->session->userdata('site_lang') == 'english'){
+                        $ask = $fq->faq_ask_eng;
+                        $ans = $fq->faq_answer_eng;
+                    }else if($this->session->userdata('site_lang') == 'chinese'){
+                        $ask = $fq->faq_ask_ch;
+                        $ans = $fq->faq_answer_ch;
+                    }
+                    ?>
+                    <div class="item">
+                        <div class="title"><?php echo $ask; ?></div>
+                        <div class="content">
+                            <?php echo $ans; ?>
                         </div>
-                        <?php echo form_open('contact/insertcontact', 'id="form_add"'); ?> 
-                        <ul>
-                            <li>
-                                <input type="text" id="kontak_nama" name="kontak_nama" placeholder="Name" required>
-                            </li>
-                            <li>
-                                <input type="email" id="kontak_email" name="kontak_email" placeholder="Email" required>
-                            </li>
-                            <li>
-                                <input type="text" id="kontak_phone" name="kontak_phone" placeholder="Phone" required>
-                            </li>
-                            <li>
-                                <textarea rows="4" cols="50" id="kontak_keterangan" placeholder="Message" name="kontak_keterangan" required style="vertical-align: top;"></textarea>
-                            </li>
-                        </ul>
-                        <input type="submit" id="button" name="kirim" value="Send"  class="btn btn-success" />
-                        <?php echo form_close(); ?> 
                     </div>
-                </div> 
+                <?php } ?>
             </div>
         </div>
-        <div class="content ecommerce">
-            <h1>Our Store</h1>
-            <div class="container">
-                <div class="col-md-3 col-xs-6 alibaba">
-                    <a href="">
-                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\alibaba.png">
-                    </a>
-                </div>
-                <div class="col-md-3 col-xs-6 amazon">
-                    <a href="">
-                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\amazon.png">
-                    </a>
-                </div>
-                <div class="col-md-3 col-xs-6 shopee">
-                    <a href="">
-                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\shopee.png">
-                    </a>
-                </div>
-                <div class="col-md-3 col-xs-6 tokped">
-                    <a href="">
-                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\tokped.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="content social">
-            <h1>Our Media</h1>
-            <div class="container">
-                <div class="linkedin">
-                    <a href="https://id.linkedin.com/">
-                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\linkedin_icon.svg">
-                    </a>
-                </div>
-                <div class="instagram">
-                        <a href="https://www.instagram.com/">
-                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\instagram_icon.svg">
-                        </a>
-                </div>
-                <div class="facebook">
-                        <a href="https://www.facebook.com/">
-                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\facebook_icon.svg">
-                        </a>
-                </div>
-                <div class="twitter">
-                        <a href="https://twitter.com/">
-                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\twitter_icon.svg">
-                        </a>
-                </div>
-                <div class="youtube">
-                        <a href="https://www.youtube.com/">
-                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\youtube_icon.svg">
-                        </a>
-                </div>
-            </div>
-        </div>
-
-        <div id="map"></div>
     </div>
+    <div class="contact">
+        <div class="content form">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <?php echo form_open('contact/insertcontact', 'id="form_add"'); ?> 
+                <ul>
+                    <li class="kontak_nama" id="first_name">
+                        <input type="text" id="kontak_nama" name="kontak_nama" placeholder="First Name" required>
+                    </li>
+                    <li class='kontak_nama' id="last_name">
+                        <input type="text" id="kontak_nama" name="kontak_nama" placeholder="Last Name" required>
+                    </li>
+                    <li>
+                        <input type="email" id="kontak_email" name="kontak_email" placeholder="Email Address" required>
+                    </li>
+                    <li>
+                        <select>
+                            <option>Please select your question about</option>
+                            <option>Pertanyaan?</option>
+                            <option>Pertanyaan?</option>
+                            <option>Pertanyaan?</option>
+                            <option>Pertanyaan?</option>
+                        </select>
+                    </li>
+                    <li>
+                        <textarea rows="4" cols="50" id="kontak_keterangan" placeholder="Your message here" name="kontak_keterangan" required style="vertical-align: top;"></textarea>
+                    </li>
+                </ul>
+                <input type="submit" id="button" name="kirim" value="Submit"  class="btn btn-success" />
+                <?php echo form_close(); ?> 
+            </div>
+        </div> 
+    </div>
+    <div class="map">
+        <div class="container">
+            <h1>Map</h1>
+            <div id="map"></div>
+        </div>
+    </div>
+        <div class="content store">
+            <h2>Online Store</h2>
+            <ul>
+                <li>
+                    <a class="store-detail" href="">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store1.png" />
+                        <span>MelliwTani</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="store-detail" href="">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store2.png" />
+                        <span>MelliwTani</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="store-detail" href="">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store3.png" />
+                        <span>MelliwTani</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="store-detail" href="">
+                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store4.png" />
+                        <span>MelliwTani</span>
+                    </a>
+                </li>
+              </ul>
+            </ul>
+        </div>
 </div>
 <script type="text/javascript">
     function initMap() {

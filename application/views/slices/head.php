@@ -25,6 +25,8 @@ echo add_css($folder . 'photobox');
 echo add_css($folder . 'style');
 echo add_css($folder . 'jquery.bxslider');
 echo add_css($folder . 'general');
+echo add_css($folder . 'owl.carousel');
+echo add_css($folder . 'owl.carousel.min');
 echo add_css($folder . 'jquery.fancybox.min');
 echo add_js($folder . 'bootstrap.min');
 echo add_js($folder . 'jquery.countdown.min');
@@ -37,11 +39,17 @@ echo add_js($folder . 'jquery.photobox');
 echo add_js($folder . 'preloader');
 echo add_js($folder . 'jquery.bxslider');
 echo add_js($folder . 'jquery.fancybox.min');
+echo add_js($folder . 'owl.carousel');
+echo add_js($folder . 'owl.hash');
+echo add_js($folder . 'owl.lazyload');
+echo add_js($folder . 'owl.navigation');
+echo add_js($folder . 'owl.video');
 ?>
 		<link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Pacifico|Handlee|Parisienne|Sacramento|Yanone+Kaffeesatz|Raleway:400,500|Josefin+Sans" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <script type="text/javascript">
