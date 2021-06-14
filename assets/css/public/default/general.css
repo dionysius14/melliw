@@ -4,7 +4,9 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+img{
+    width: 100%;
+}
 body{
     background-color: white;    
     font-family: 'Roboto', sans-serif;
@@ -480,6 +482,9 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
 .content.store > ul li{
     width: 25%;
 }
+.content.store > ul li img{
+    max-width: 180px;
+}
 .content.store > ul li a:hover,
 .content.store > ul li a:focus{
     color: #70aa44;
@@ -520,6 +525,9 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
 .about-us .profile .container .image{
     width: 45%;
     margin-left: auto;
+}
+.about-us .profile .container .image.mobile{
+    display: none;
 }
 .about-us .profile .container .image img{
     width: 100%;
@@ -576,6 +584,7 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
     position: absolute;
     top: -215px;
     left: 50%;
+    max-width: 450px;
 }
 .about-us .image img{
     width: 100%;
@@ -1133,8 +1142,6 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
     .footer-container .footer .container > .row .category ul{
             font-size: 23px;
     }
-
-
     .content.store{
         display: block;
         padding-top: 0px;
@@ -1167,44 +1174,58 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
         font-size: 25px;
     }
 
-    .homepage .products .container .gkImage {
-        width: calc(100% / 2);
+    .about-us .visi-misi .container .misi > img{
+        transform: translateX(-50%);   
+        z-index: 0;
     }
-    .back-home.animsition .profile.container .side {
-        width: 100%;
+    .visi-misi .visi,
+    .visi-misi .misi > h3{
+        z-index: 1;
+        position: relative;
     }
-    .back-home.animsition .side img{
-        width: 100%;
+    .visi-misi .misi .image,
+    .stucture .image{
+         overflow: auto;
     }
+    .visi-misi .misi .image img,
+    .stucture .image img{
+        width: 1024px;
+    }
+    .about-us .profile h1{
+        text-align: left;
+        font-size: 30px;
+    }
+    .about-us .subtitle {
+        font-size: 22px;
+        text-align: left;
+    }
+
     .ourproduct .ourproduct-container .container .sidebar-category{
         width: 30%;
     }
     .ourproduct .ourproduct-container .container .main{
         width: 70%;
     }
-    .ourproduct .ourproduct-container .container .main .items .item {
-        width: calc(100% / 2);
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 1em;
-        padding-top: 1em;
+    .ourproduct .ourproduct-container .container .main .items .item{
+        width: 50%;
     }
-    .ourproduct .ourproduct-container .container .main .items .item .product-container{
-        min-height: 320px;
+    .ourproduct .ourproduct-container .container .main .items .item:nth-child(3n+1){
+        clear: unset;
     }
-    .news .content .item .viewall {
-        padding-left: 0px;
-        padding-top: 20px;
+}
+
+@media only screen and (max-width: 982px) {
+    .about-us .certificate .certificate-item{
+        display: block;
     }
-    .news .content .news-container .news-items.well .item .news-desc p,
-    .news .content .news-container .news-items.well .item .news-desc img{
+    .about-us .certificate .certificate-item img{
         width: 100%;
+        padding: 0px;
     }
-    .news .content .news-container .news-items.well .item .news-desc img{
-        margin-bottom: 20px;
-    }
-    .homepage .why ul li{
-        width: calc(100% / 2);
+    .about-us .certificate .certificate-item > .text{
+        width: 100%;
+        padding: 0px;
+        margin-top: 30px;
     }
 }
 
@@ -1356,8 +1377,49 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
         padding-top: 0px;
         margin-top: 0px;
     }
+    .about-us .profile .container{
+        display: block;
+    }
+    .about-us .profile .container .image{
+        display: none;
+    }
+    .about-us .profile .container .image.mobile,
+    .about-us .profile.letter .container .image{
+        display: block;
+        float: left;
+        padding: 10px;
+        max-width: 320px;
+    }
+    .about-us .profile.letter .container .image{
+        float: right;
+    }
+    .about-us .profile .container .content{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .about-us .profile .container .story,
+    .about-us .profile .container .letter{
+        width: 100%;
+    }
+
+    .about-us .visi-misi .container .visi span{
+        width: auto;
+    }
+    .about-us .visi-misi .background-image,
+    .about-us .value .image{
+        opacity: 1 !important
+    }
+    .about-us .value{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
 
+
+
+    .ourproduct .ourproduct-container .container .main .items .item{
+        width: 100%;
+    }
     .contact-us .content.location > .container{
         display: block;
     }
@@ -1421,16 +1483,11 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
         margin-bottom: 20px;
     }
 
-
-    .news .content{
-        padding: 0px;
+    .news .content.store{
+        margin-top: 40px;
     }
-    .news .content .news-container .news-items{
-        width: 100%;
-        float: none;
-    }
-    .news-detail .content{
-        width: 100%
+    .trending-content h2, .recent-content h2{
+        font-size: 25px;
     }
 
 }
@@ -1498,33 +1555,51 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
         float: none;
         width: 100%;
     }
+    .ourproduct .ourproduct-container .container .main .items .item{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .ourproduct .ourproduct-container .container .main .items .item .product-container{
+        padding: 0px;
+    }
     .ourproduct .ourproduct-container .container .sidebar-category ul{
         display: block;
-        overflow: unset;
         margin-bottom: 1px;
+        height: auto;
+        overflow: hidden;
     }
     .ourproduct .ourproduct-container .container .sidebar-category ul li{
         float: left;
-        margin-right: 0px;
-        padding: 1px;
+        margin-right: 5px;
+        padding: 5px;
         display: block;
         width: calc((100% / 3));
+        border: 1px solid #16293a;
     }
     .ourproduct .ourproduct-container .container .sidebar-category ul li a{
         color: #3a7f0d;
-        border: 1px solid #16293a;
         background: white;
     }
-    .ourproduct .ourproduct-container .container .sidebar-category ul li.current a{
+    .ourproduct .ourproduct-container .container .sidebar-category ul li.current{
         background: #16293a;
+    }
+    .ourproduct .ourproduct-container .container .sidebar-category ul li.current a{
         position: relative;
         color: white;
+        background: unset;
     }
     .ourproduct .ourproduct-container .container .sidebar-category ul li.current a:before{
         display: none;
     }
     .ourproduct .ourproduct-container .container .main{
         width: 100%;
+    }
+    .ourproduct .ourproduct-container .container .main .search-product, 
+    .ourproduct .ourproduct-container .container .main .sortby{
+            width: 100%;
+    }
+    .ourproduct .ourproduct-container .container .main .search-product input{
+        border: 1px solid black;
     }
 
 

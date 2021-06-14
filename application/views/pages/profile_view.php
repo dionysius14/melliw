@@ -8,6 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	<div class="profile">
 		<div class="container">
+			<div class="image mobile">
+				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myprofile\story.png">
+			</div>
 			<div class="story">
 				<h1>Story Behind</h1>
 				<div class="content">
@@ -115,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$(window).on("load",function() {
 			  $(window).scroll(function() {
 			    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-			    var objectBottom = $(".value .image").offset().top + $(this).outerHeight() - 200;
+			    var objectBottom = $(".value .image").offset().top + $(this).outerHeight() - 400;
 			    /* If the element is completely within bounds of the window, fade it in */
 			    if (objectBottom < windowBottom) { //object comes into view (scrolling down)
 			        if ($(".value .image").css("opacity")==0) {$(".value .image").fadeTo(500,1);}
