@@ -1121,6 +1121,9 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
     .header .middle .language{
         top: 40px;
     }
+    .footer-container .footer .container{
+        top: 50px;
+    }
 }
 @media only screen and (max-width: 1023px) {
     .header .header-menu .navbar-nav li a{
@@ -1624,7 +1627,7 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
 
     .news-detail .main-banner img,
     .faq .main-banner img{
-        width: initial;
+        width: 100%;
     }
     .contact-us .content.social .container > div{
         float: left;
