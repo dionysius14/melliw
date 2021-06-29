@@ -231,15 +231,24 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
     color:#FFF;
     border-radius:50px;
     text-align:center;
-  font-size:30px;
+    font-size:30px;
     box-shadow: 2px 2px 3px #999;
-  z-index:100;
+    z-index:100;
 }
 
 .wa-float{
     margin-top:16px;
 }
 
+.wa-icon-float .fa-whatsapp:before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../default/img/whatsapp.png);
+    background-size: 100%;
+    filter: invert(1);
+}
 
 .menu h1{
     margin-top: 0px;
@@ -256,6 +265,7 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
     height: auto;
     position: relative;
     background: white;
+    z-index: 1
 }
 .footer-container .copyright{
     height: auto;
@@ -300,7 +310,7 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
 .footer-container .footer .container > .row .category ul{    
     padding-left: 30px;
     border-left: 5px solid #c0da6d;
-    font-size: 30px;
+    font-size: 23px;
     font-weight: 700;
 }
 .footer-container .footer .container > .row .category ul li{    
@@ -461,6 +471,13 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
     float: left;
 }
 
+.homepage-container .content.product .bx-wrapper img{
+    max-width: 300px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
 .content.store{
     display: flex;
     text-align: center;
@@ -517,6 +534,9 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
 }
 .about-us .profile h1{
     margin-bottom: 0px;
+}
+.about-us .profile .container p{
+    font-size: 25px;
 }
 .about-us .profile .container .story{
     width: 40%;
@@ -673,6 +693,9 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
     padding: 0px 0 1px;
     position: relative;
 }
+.ourproduct .ourproduct-container .content.store{
+    border-top: 1px solid #c1db6d;
+}
 .ourproduct .ourproduct-container .main-banner{
     position: absolute;
     top: 0;
@@ -684,7 +707,7 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
 }
 .ourproduct .ourproduct-container .container .main-content{
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 125px;
 }
 .ourproduct .ourproduct-container .container h1{
     text-align: center;
@@ -950,11 +973,33 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
 
 
 
+.news-detail {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
 .news-detail .main-banner{
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0px 15px;
-    text-align: center;
+    padding: 0px 30px;
+    text-align: left;
+    float: left;
+}
+.news-detail .main-banner img{
+    max-width: 500px;
+}
+.news-detail .container .content{
+    padding-top: 0px;
+}
+
+.news-detail .container .content h2{
+    margin-top: 0px;
+}
+.news-detail .container .content p{
+    font-size: 22px;
+}
+.news-detail .container .content .date{
+    margin-bottom: 30px;
 }
 
 
@@ -1491,6 +1536,14 @@ body.menu .header .header-menu .navbar-nav li:first-child > a{
     }
     .trending-content h2, .recent-content h2{
         font-size: 25px;
+    }
+
+    .news-detail .main-banner{
+        float: none;    
+        margin-bottom: 30px;
+    }
+    .news-detail .main-banner img{
+        max-width: 100%
     }
 
 }
