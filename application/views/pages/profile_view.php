@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="main-banner">
 		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myproduct\myproductbaner.png">
 	</div>
-	<div class="profile">
+	<div class="profile" id="story">
 		<div class="container">
 			<div class="image mobile">
 				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myprofile\story.png">
@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 	</div>
-	<div class="profile letter">
+	<div class="profile letter" id="letter">
 		<div class="container">
 			<div class="image">
 				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myprofile\letter.png">
@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 
 
-	<div class="visi-misi">
+	<div class="visi-misi" id="vimi">
 		<div class="background-image">
 			<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myprofile\visimisi.png">
 			<h1>Visi & Misi</h1>
@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 
-	<div class="value">
+	<div class="value" id="value">
 		<h1>Company Value</h1>
 		<div class="subtitle">The values that govern everything we do.</div>
 		<p>
@@ -130,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			});
 		</script>
 	</div>
-	<div class="stucture">
+	<div class="stucture" id="org">
 		<div class="container">
 			<h1>Organization Stucture</h1>
 			<div class="image">
@@ -144,7 +144,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="certificate-item">
 				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myprofile\sertifikat.jpg">
 				<div class="text">
-					<div class="subtitle">Disruption and shifting</div>
+					<div class="subtitle">Letter from Executive</div>
 					<div class="content">
 						<p>
 							Lembaga Sertifikasi Organik Seloliman (Lesos) merupakan salah satu lembaga sertifikasi pertama di Indonesia yang berhak melakukan investigasi, mengeluarkan sertifikat dan label organik untuk berbagai macam produk organik, petani dan kelompok tani, koperasi, perusahaan, dan lain-lain yang telah memenuhi persayaratan. LeSOS berdiri sejak tahun 2006 dan secara resmi memiliki Akta Notaris Nomor 15 Tanggal 08 Maret 2007 dan Akta Perubahan Nomor 29 Tanggal 19 Desember 2017. 

@@ -32,43 +32,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="text">
 				<div>
 					<h2>Our Bussiness</h2>
-					<p>Bergerak di bidang export bahan pangan organic berkualitas, kami berusaha untuk meningkatkan kesejahteraaan petani, kelestarian alam, dan kesehatan manusia.</p>
+					<p>Bergerak di bidang export bahan pangan organik berkualitas, kami berusaha untuk meningkatkan kesejahteraaan petani, kelestarian alam, dan kesehatan manusia.</p>
 					<p>PT MELLIW TANI ORGANIK berkomitmen untuk terus belajar, mengefisiensi, dan mengefektifkan sumber daya kami untuk menemukan solusi dari tantangan-tantangan pertanian Indonesia</p>
 				</div>
 			</div>
 			<div class="images">
 				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\homepage-leaf.png" />
 			</div>
-			<script type="text/javascript">
-				$(window).on("load",function() {
-				  $(window).scroll(function() {
-				    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-				    var objectBottom = $(".content.leaf .images").offset().top + $(this).outerHeight();
-				    /* If the element is completely within bounds of the window, fade it in */
-				    if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-				        if ($(".content.leaf .images").css("opacity")==0) {$(".content.leaf .images").fadeTo(500,1);}
-				    } else { //object goes out of view (scrolling up)
-				        if ($(".content.leaf .images").css("opacity")==1) {$(".content.leaf .images").fadeTo(500,0);}
-				    }
-				  }).scroll(); //invoke scroll-handler on page-load
-				});
-			</script>
 		</div>
 		<div class="second-banner slider">
 			<ul class="bxslider">
 				<li>
 					<a href="<?php echo $sld->banner_link; ?>">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\homepage-banner2.png" />
+						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\keunggulan1.jpg" />
 					</a>
 				</li>
 				<li>
 					<a href="<?php echo $sld->banner_link; ?>">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\homepage-banner2.png" />
+						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\keunggulan2.jpg" />
 					</a>
 				</li>
 				<li>
 					<a href="<?php echo $sld->banner_link; ?>">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\homepage-banner2.png" />
+						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\keunggulan3.jpg" />
 					</a>
 				</li>
 			</ul>

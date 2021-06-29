@@ -21,11 +21,11 @@
 		        </div>
 		        <div class="category">
 		        	<ul>
-		        		<li><a href="">Home</a></li>
-		        		<li><a href="">Profile</a></li>
-		        		<li><a href="">Product</a></li>
-		        		<li><a href="">News & Event</a></li>
-		        		<li><a href="">Customer Care</a></li>
+		        		<li><a href="<?php echo base_url(); ?>">Home</a></li>
+		        		<li><a href="<?php echo base_url(); ?>profile">Profile</a></li>
+		        		<li><a href="<?php echo base_url(); ?>ourproduct">Product</a></li>
+		        		<li><a href="<?php echo base_url(); ?>news">News & Event</a></li>
+		        		<li><a href="<?php echo base_url(); ?>contact">Customer Care</a></li>
 		        	</ul>
 		        </div>
 			</div>

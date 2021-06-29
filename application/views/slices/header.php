@@ -28,11 +28,11 @@
                                 <?php echo $this->lang->line('menu_profile'); ?>
                             </a>
                             <ul>
-                                <li><a href="">Story Behind</a></li>
-                                <li><a href="">Letter From Executive</a></li>
-                                <li><a href="">Vision & Mission</a></li>
-                                <li><a href="">Company Value</a></li>
-                                <li><a href="">Organization Structure</a></li>
+                                <li><a href="<?php echo base_url(); ?>profile#story">Story Behind</a></li>
+                                <li><a href="<?php echo base_url(); ?>profile#letter">Letter From Executive</a></li>
+                                <li><a href="<?php echo base_url(); ?>profile#vimi">Vision & Mission</a></li>
+                                <li><a href="<?php echo base_url(); ?>profile#value">Company Value</a></li>
+                                <li><a href="<?php echo base_url(); ?>profile#org">Organization Structure</a></li>
                             </ul>
                         </li>
                         <li class="list-menu category">
@@ -40,10 +40,10 @@
                                 <?php echo $this->lang->line('menu_product'); ?>
                             </a>
                             <ul>
-                                <li><a href="">Vegetables</a></li>
-                                <li><a href="">Fruits</a></li>
-                                <li><a href="">Coffee</a></li>
-                                <li><a href="">Tubers</a></li>
+                                <li><a href="<?php echo base_url(); ?>ourproduct">Vegetables</a></li>
+                                <li><a href="<?php echo base_url(); ?>ourproduct">Fruits</a></li>
+                                <li><a href="<?php echo base_url(); ?>ourproduct">Coffee</a></li>
+                                <li><a href="<?php echo base_url(); ?>ourproduct">Tubers</a></li>
                             </ul>
                         </li>
                         <li class="list-menu category">
@@ -53,10 +53,10 @@
                             <a href="<?php echo site_url("contact"); ?>">Customer Care</a>
                             <ul>
                                 <li>
-                                    <a data-toggle="" data-target=".navbar-collapse" class="page-scroll" href=""><?php echo $this->lang->line('menu_faq'); ?></a>
+                                    <a data-toggle="" data-target=".navbar-collapse" class="page-scroll" href="<?php echo base_url(); ?>contact#faq"><?php echo $this->lang->line('menu_faq'); ?></a>
                                 </li>
                                 <li>
-                                    <a data-toggle="" data-target=".navbar-collapse" class="page-scroll" href=""><?php echo $this->lang->line('menu_contact'); ?></a>
+                                    <a data-toggle="" data-target=".navbar-collapse" class="page-scroll" href="<?php echo base_url(); ?>contact#contact"><?php echo $this->lang->line('menu_contact'); ?></a>
                                 </li>
                             </ul>
                         </li>
@@ -181,6 +181,13 @@ $(document).ready(function ($) {
             $('.list-menu.category .sub-category').toggleClass("active");
         });
         $('.header .header-menu #google_translate_element').insertBefore( "body > .header .mobile-menu" );
+    }
+
+    var hash = window.location.hash.substr(1);
+    if (hash) {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $('#' + hash).offset().top
+        }, 2000);
     }
 });
 

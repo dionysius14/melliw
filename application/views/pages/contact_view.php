@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="contact-faq">
     <div class="faq">
-        <div class="container">
+        <div class="container" id="faq">
             <h1>
                 FAQ
                 <span>Answer to our most frequently asked questions.</span>
@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="content form">
             <div class="container">
                 <h1>Contact Us</h1>
