@@ -63,10 +63,13 @@
                     </ul>
 
                     <div class="search-bar">
+                          </form>
                         <button>
                             <i class="fas fa-search" style="color:#385624"></i>
                         </button>
-                        <input type="" name="">
+                        <form action="<?php echo base_url(); ?>/ourproduct/search" id="form_add" method="post" accept-charset="utf-8">
+                          <input type="text" id="filter" name="filter" class="form-control" placeholder="Cari Produk">
+                        </form>
                     </div>
                 </div>
             </div>

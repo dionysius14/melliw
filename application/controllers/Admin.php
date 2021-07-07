@@ -63,12 +63,16 @@ class Admin extends CI_Controller {
         $gc->display_as('profile_ket', 'Profile');
         $gc->display_as('profile_ket_eng', 'Profile(Eng)');
         $gc->display_as('profile_ket_ch', 'Profile(Chinese)');
-        $gc->display_as('overview', 'Company Overview');
-        $gc->display_as('overview_eng', 'Company Overview(Eng)');
-        $gc->display_as('overview_ch', 'Company Overview(Chinese)');
+        $gc->display_as('overview', 'Disruption and shifting');
+        $gc->display_as('overview_eng', 'Disruption and shifting(Eng)');
+        $gc->display_as('overview_ch', 'Disruption and shifting(Chinese)');
         $gc->display_as('link_fb', 'Link Facebook');
         $gc->display_as('link_ig', 'Link Instagram');
         $gc->display_as('link_wa', 'Whatsapp');
+        $gc->display_as('link_store1', 'Link Store 1');
+        $gc->display_as('link_store2', 'Link Store 2');
+        $gc->display_as('link_store3', 'Link Store 3');
+        $gc->display_as('link_store4', 'Link Store 4');
         $gc->display_as('phone', 'HP');
         $gc->display_as('email', 'Email');
         $gc->display_as('working_time', 'Working Time');
@@ -237,9 +241,10 @@ class Admin extends CI_Controller {
         $gc->display_as('news_konten', 'Konten');
         $gc->display_as('news_konten_eng', 'Konten(Eng)');
         $gc->display_as('news_konten_ch', 'Konten(Chinese)');
+        $gc->display_as('trending', 'Trending');
 		$gc->set_field_upload('news_foto', 'assets/uploads/news');
         $gc->required_fields('news_foto','news_judul','news_konten');
-        $gc->columns('news_foto', 'news_judul');
+        $gc->columns('news_foto', 'news_judul','trending');
         $gc->unset_print();
         // $gc->unset_add();
         $gc->callback_before_insert(array($this, 'callback_before_insert_news'));
@@ -249,6 +254,7 @@ class Admin extends CI_Controller {
         $output->notes = '<p><i></i></p>';
         $this->paint_slice($output);
     }
+   
    
     function callback_before_insert_gallery($post_array)
     {
@@ -260,7 +266,7 @@ class Admin extends CI_Controller {
         $gc = new grocery_CRUD();
         $gc->set_subject('Kontak');
         $gc->set_table('data_kontak');
-        $gc->display_as('kontak_nama', 'Nama');
+        $gc->display_as('kontak_nama', 'Nama Depan');
         $gc->display_as('kontak_email', 'Email');
         $gc->display_as('kontak_phone', 'Phone');
         $gc->display_as('kontak_keterangan', 'Keterangan');

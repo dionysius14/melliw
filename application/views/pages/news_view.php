@@ -7,19 +7,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="content">
 			<h1>
 				News & Event
-				<select>
+<!-- 				<select>
 					<option>Archive</option>
 					<option>Archive 1</option>
 					<option>Archive 2</option>
 					<option>Archive 3</option>
-				</select>
+				</select> -->
 			</h1>
 			<div class="trending">
 				<h4>Trending</h4>
 				<div class="trending-content">
-					<img src="<?php echo base_url(); ?>\assets\css\public\default\img\new\news-top.png">
-					<h2>About organic trend 2021 century</h2>
-					<button>Read more</button>
+					<img src="<?php echo base_url(); ?>assets/uploads/news/<?php echo $news_trending->news_foto; ?>">
+					<h2><?php echo $news_trending->news_judul; ?></h2>
+					<button><a href="<?php echo site_url("newsdetail?id=".$news_trending->news_id.""); ?>">Read More</a></button>
 				</div>
 			</div>
 		</div>
@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div>
 						<img src="<?php echo base_url(); ?>assets/uploads/news/<?php echo $nw->news_foto; ?>">
 						<div class="news-desc">
-							lorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablablalorem ipsum blablabla
+							<?php echo $nw->news_konten; ?>
 						</div>
 						<a href="<?php echo site_url("newsdetail?id=".$nw->news_id.""); ?>">Read More</a>
 					</div>
@@ -71,34 +71,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="recent">
 				<h4>Recent</h4>
 				<div class="recent-content">
-					<img src="<?php echo base_url(); ?>\assets\css\public\default\img\new\news-recent.png">
-					<h2>Grow naturally with melliw tani</h2>
-					<button>Read more</button>
+					<img src="<?php echo base_url(); ?>assets/uploads/news/<?php echo $news_recent->news_foto; ?>">
+					<h2><?php echo $news_recent->news_judul; ?></h2>
+					<button><a href="<?php echo site_url("newsdetail?id=".$news_recent->news_id.""); ?>">Read More</a></button>
 				</div>
 			</div>
 			<div class="content store">
 				<h2>Online Store</h2>
 				<ul>
 		            <li>
-		            	<a class="store-detail" href="">
+		            	<a class="store-detail" href="<?php echo $profile->link_store1; ?>">
 		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store1.png" />
 		            		<span>MelliwTani</span>
 		            	</a>
 			        </li>
 		            <li>
-		            	<a class="store-detail" href="">
+		            	<a class="store-detail" href="<?php echo $profile->link_store2; ?>">
 		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store2.png" />
 		            		<span>MelliwTani</span>
 		            	</a>
 			        </li>
 		            <li>
-		            	<a class="store-detail" href="">
+		            	<a class="store-detail" href="<?php echo $profile->link_store3; ?>">
 		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store3.png" />
 		            		<span>MelliwTani</span>
 		            	</a>
 		            </li>
 		            <li>
-		            	<a class="store-detail" href="">
+		            	<a class="store-detail" href="<?php echo $profile->link_store4; ?>">
 		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store4.png" />
 		            		<span>MelliwTani</span>
 		            	</a>

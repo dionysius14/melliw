@@ -9,25 +9,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="profile" id="story">
 		<div class="container">
 			<div class="image mobile">
-				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myprofile\story.png">
+				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myprofile\story_1_optimized.png">
 			</div>
 			<div class="story">
 				<h1>Story Behind</h1>
 				<div class="content">
 					<?php echo $profile->profile_ket; ?>
-					<p>
-						Berlatar belakang perhatian yang lebih terhadap kesejahteraan petani, kelestarian alam, lingkungan yang alami dan peningkatan kesehatan manusia, PT MELLIW TANI ORGANIK berusaha memetakan dan mencari solusi terhadap tantangan-tantangan tersebut.
-					</p>
-					<p>
-						Tantangan utama di Indonesia ini adalah pemakaian pupuk kimia yang telah berlangsung sangat lama yaitu sejak tahun 1960 (58 tahun sebelum kami memulai perusahaan ini). Hal ini menyebabkan efek bola salju yang sangat merusak. Dari dimulainya kerusakan lingkungan, penurunan kesuburan tanah, yang berdampak pada penurunan kapasitas produksi dan kualitas produksi, sehingga ini jelas berdampak pada kesejahteraan petani dan kesehatan manusia pada umumnya.
-					</p>
-					<p>
-						Maka mulai tahun 2018, PT MELLIW TANI ORGANIK serius menghadapi tantangan tantangan yang ada. Kami percaya akan sangat berdampak pada lingkungan, alam, kesehatan manusia dan kesejahteraan petani.
-					</p>
 				</div>
 			</div>
 			<div class="image">
-				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myprofile\story.png">
+				<img src="<?php echo base_url(); ?>\assets\css\public\default\img\myprofile\story_1_optimized.png">
 			</div>
 		</div>
 	</div>
@@ -40,16 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<h1>Letter From Executive</h1>
 				<div class="subtitle">Disruption and shifting</div>
 				<div class="content">
-					<?php echo $profile->profile_ket; ?>
-					<p>
-						Dewasa ini, perusahaan yang menjalankan Disruption dan Shifting mengalami pertumbuhan dua digit setiap tahunnya, sedangkan perusahaan yang tidak menjalankan, akan mengalami stagnasi atau bahkan penurunan. 
-					</p>
-					<p>
-						PT MELLIW TANI ORGANIK melihat adanya pergeseran orientasi konsumen (shifting) di mana organik dan kesehatan menjadi perhatian masyarakat akhir akhir ini. Kesehatan dan bahan makanan organik yang awalnya identik dengan harga yang mahal dan hanya untuk masyarakat menengah atas. Sekarang dengan adanya perkembangan teknologi, e!siensi dan efektifitas, bukan tidak mungkin jika harga turun sehingga bisa di terima oleh masyarakat kelas menengah.
-					</p>
-					<p>
-						PT MELLIW TANI ORGANIK berkomitmen untuk terus belajar mengamati, memodifikasi, mengefisiensi dan mengefektifkan sumber daya kami. Supaya dapat terus meningkatkan kelestarian alam, lingkungan yang alami dan peningkatan kesehatan manusia.
-					</p>
+					<?php echo $profile->overview; ?>
 				</div>
 			</div>
 		</div>

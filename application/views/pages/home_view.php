@@ -6,26 +6,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="homepage-container">
 		<div class="main-banner slider">
 			<ul class="bxslider">
-<!-- 				<?php foreach($slider as $sld){?>
+ 				<?php foreach($slider as $sld){?>
 				<li>
 					<a href="<?php echo $sld->banner_link; ?>"><img src="<?php echo base_url(); ?>assets/uploads/slider/<?php echo $sld->banner_foto; ?>" /></a>
 				</li>
-				<?php } ?> -->
-				<li>
-					<a href="<?php echo $sld->banner_link; ?>">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\homepage-main-banner.jpg" />
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo $sld->banner_link; ?>">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\homepage-main-banner.jpg" />
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo $sld->banner_link; ?>">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\homepage-main-banner.jpg" />
-					</a>
-				</li>
+				<?php } ?> 
 			</ul>
 		</div>	
 		<div class="content leaf">
@@ -44,17 +29,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<ul class="bxslider">
 				<li>
 					<a href="<?php echo $sld->banner_link; ?>">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\keunggulan1.jpg" />
+						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\keunggulan1_optimized.jpeg" />
 					</a>
 				</li>
 				<li>
 					<a href="<?php echo $sld->banner_link; ?>">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\keunggulan2.jpg" />
+						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\keunggulan2_optimized.jpeg" />
 					</a>
 				</li>
 				<li>
 					<a href="<?php echo $sld->banner_link; ?>">
-						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\keunggulan3.jpg" />
+						<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\keunggulan3_optimized.jpeg" />
 					</a>
 				</li>
 			</ul>
@@ -119,30 +104,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="content store">
 			<h2>Online Store</h2>
 			<ul>
-	            <li>
-	            	<a class="store-detail" href="">
-	            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store1.png" />
-	            		<span>MelliwTani</span>
-	            	</a>
-		        </li>
-	            <li>
-	            	<a class="store-detail" href="">
-	            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store2.png" />
-	            		<span>MelliwTani</span>
-	            	</a>
-		        </li>
-	            <li>
-	            	<a class="store-detail" href="">
-	            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store3.png" />
-	            		<span>MelliwTani</span>
-	            	</a>
-	            </li>
-	            <li>
-	            	<a class="store-detail" href="">
-	            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store4.png" />
-	            		<span>MelliwTani</span>
-	            	</a>
-	            </li>
+		            <li>
+		            	<a class="store-detail" href="<?php echo $profile->link_store1; ?>">
+		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store1.png" />
+		            		<span>MelliwTani</span>
+		            	</a>
+			        </li>
+		            <li>
+		            	<a class="store-detail" href="<?php echo $profile->link_store2; ?>">
+		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store2.png" />
+		            		<span>MelliwTani</span>
+		            	</a>
+			        </li>
+		            <li>
+		            	<a class="store-detail" href="<?php echo $profile->link_store3; ?>">
+		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store3.png" />
+		            		<span>MelliwTani</span>
+		            	</a>
+		            </li>
+		            <li>
+		            	<a class="store-detail" href="<?php echo $profile->link_store4; ?>">
+		            		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\store4.png" />
+		            		<span>MelliwTani</span>
+		            	</a>
+		            </li>
 	          </ul>
 			</ul>
 		</div>

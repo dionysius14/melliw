@@ -66,6 +66,8 @@ class News extends CI_Controller {
         }
         $common['news'] = $this->db->query('SELECT * FROM data_news '
                         . ' ORDER BY news_date DESC LIMIT ' . $page . ',' . $config['per_page'])->result();
+        $common['news_trending'] = $this->db->query('SELECT * FROM data_news WHERE trending = "Yes" LIMIT 1')->row();
+        $common['news_recent'] = $this->db->query('SELECT * FROM data_news WHERE recent = "Yes" LIMIT 1')->row();
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');

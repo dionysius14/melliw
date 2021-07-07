@@ -39,10 +39,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php echo form_open('contact/insertcontact', 'id="form_add"'); ?> 
                 <ul>
                     <li class="kontak_nama" id="first_name">
-                        <input type="text" id="kontak_nama" name="kontak_nama" placeholder="First Name" required>
+                        <input type="text" id="kontak_nama" name="kontak_nama" placeholder="Name" required>
                     </li>
                     <li class='kontak_nama' id="last_name">
-                        <input type="text" id="kontak_nama" name="kontak_nama" placeholder="Last Name" required>
+                        <input type="text" id="kontak_phone" name="kontak_phone" placeholder="Phone" required>
                     </li>
                     <li>
                         <input type="email" id="kontak_email" name="kontak_email" placeholder="Email Address" required>
@@ -50,10 +50,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li>
                         <select>
                             <option>Please select your question about</option>
-                            <option>Pertanyaan?</option>
-                            <option>Pertanyaan?</option>
-                            <option>Pertanyaan?</option>
-                            <option>Pertanyaan?</option>
+                            <option>Informasi</option>
+                            <option>Harga</option>
+                            <option>Kerjasama</option>
                         </select>
                     </li>
                     <li>
@@ -74,30 +73,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="content store">
             <h2>Online Store</h2>
             <ul>
-                <li>
-                    <a class="store-detail" href="">
-                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store1.png" />
-                        <span>MelliwTani</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="store-detail" href="">
-                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store2.png" />
-                        <span>MelliwTani</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="store-detail" href="">
-                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store3.png" />
-                        <span>MelliwTani</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="store-detail" href="">
-                        <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store4.png" />
-                        <span>MelliwTani</span>
-                    </a>
-                </li>
+
+                    <li>
+                        <a class="store-detail" href="<?php echo $profile->link_store1; ?>">
+                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store1.png" />
+                            <span>MelliwTani</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="store-detail" href="<?php echo $profile->link_store2; ?>">
+                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store2.png" />
+                            <span>MelliwTani</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="store-detail" href="<?php echo $profile->link_store3; ?>">
+                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store3.png" />
+                            <span>MelliwTani</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="store-detail" href="<?php echo $profile->link_store4; ?>">
+                            <img src="<?php echo base_url(); ?>\assets\css\public\default\img\store4.png" />
+                            <span>MelliwTani</span>
+                        </a>
+                    </li>
               </ul>
             </ul>
         </div>

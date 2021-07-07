@@ -12,10 +12,10 @@
 		            	<a class="email" href="mailto:<?php echo $profile->email; ?>"></a>
 			        </li>
 		            <li>
-		            	<a class="facebook" href="https://www.facebook.com/"></a>
+		            	<a class="facebook" href="<?php echo $profile->link_fb; ?>"></a>
 		            </li>
 		            <li>
-		            	<a class="instagram" href="https://www.instagram.com/"></a>
+		            	<a class="instagram" href="<?php echo $profile->link_ig; ?>"></a>
 		            </li>
 		          </ul>
 		        </div>
@@ -30,7 +30,7 @@
 		        </div>
 			</div>
     	</div>
-		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\footer-image.png">
+		<img src="<?php echo base_url(); ?>\assets\css\public\default\img\footer-image_optimized.png">
     </div>
     <div class="copyright">Melliw 2021 All Right Reserved</div>
 </div>
